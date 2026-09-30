@@ -681,10 +681,15 @@ jQuery(document).ready(function($){
         let candidateName = $(this).data('candidate-name');
 		let candidateRegion = $(this).data('candidate-region');
 		let candidateImage = $(this).data('candidate-image');
+		let candidateMessage = $(this).data('candidate-message');
 
         $('#mbv-paid-candidate-name').text(candidateName);
 		$('.mbv-region').text(candidateRegion);
 		$('#mbv-paid-candidate-image').attr('src', candidateImage);
+		$('#mbv-paid-candidate-message').text(
+    candidateMessage || 
+    'Every vote brings her closer to the Final.'
+);
 
         $('#mbv-paid-vote-popup')
             .attr('data-candidate-id', candidateID)
@@ -726,7 +731,7 @@ $(document).on(
     function(){
 
 
-        let region = $(this).data('region');
+        let region = String($(this).data('region') || '').toLowerCase().trim();
 
 
 
@@ -743,7 +748,7 @@ $(document).on(
         $('.mbv-card').each(function(){
 
 
-            let cardRegion = $(this).data('region');
+            let cardRegion = String($(this).data('region') || '').toLowerCase().trim();
 
 
 

@@ -25,11 +25,19 @@ $city = get_post_meta(
 
 
 
-$region = get_post_meta(
+$raw_region = get_post_meta(
     $candidate_id,
     '_mbv_region',
     true
 );
+
+$region = trim((string) $raw_region);
+
+if (empty($region)) {
+    $region = 'Other Candidates';
+}
+
+$normalized_region = mb_strtolower($region, 'UTF-8');
 
 
 
@@ -41,12 +49,10 @@ $votes = intval(
     )
 );
 
-
-if($votes > 5000){
-
-    $votes = 5000;
-
-}
+$max_votes_setting = get_option('mbv_max_votes_per_candidate', '');
+$has_limit = ($max_votes_setting !== '' && $max_votes_setting !== false && is_numeric($max_votes_setting) && intval($max_votes_setting) > 0);
+$limit = $has_limit ? intval($max_votes_setting) : 0;
+$is_closed = ($has_limit && $votes >= $limit);
 
 
 
@@ -58,24 +64,32 @@ $instagram = get_post_meta(
 
 
 
-$countdown_end_date = get_post_meta(
+$countdown_end_date = class_exists('MBV_Candidate_Fields')
+    ? MBV_Candidate_Fields::get_active_countdown($candidate_id)
+    : get_post_meta($candidate_id, '_mbv_countdown_end_date', true);
+
+$final_message = get_post_meta(
     $candidate_id,
-    '_mbv_countdown_end_date',
+    '_mbv_final_message',
     true
 );
 
+if (empty($final_message)) {
 
+    if ($has_limit) {
+        $final_message = 'Help talented candidates from every region reach ' . number_format_i18n($limit) . ' votes, complete the mandatory Bootcamp and secure their place in the Grand Final.';
+    } else {
+        $final_message = 'Help talented candidates from every region gain votes, complete the mandatory Bootcamp and secure their place in the Grand Final.';
+    }
 
-$total_votes = 5000;
-
+}
 
 $percentage = 0;
 
-
-if ($total_votes > 0) {
+if ($has_limit && $limit > 0) {
 
     $percentage = round(
-        ($votes / intval($total_votes)) * 100
+        ($votes / $limit) * 100
     );
 
     if($percentage > 100){
@@ -93,7 +107,7 @@ if ($total_votes > 0) {
 
 <div class="mbv-card" 
 data-candidate="<?php echo esc_attr($candidate_id); ?>"
-data-region="<?php echo esc_attr(strtolower($region)); ?>">
+data-region="<?php echo esc_attr($normalized_region); ?>">
 
 
 
@@ -101,12 +115,9 @@ data-region="<?php echo esc_attr(strtolower($region)); ?>">
 
 <?php
 
-$rank = intval(
-    get_post_meta(
-        $candidate_id,
-        '_mbv_rank',
-        true
-    )
+$rank = get_query_var(
+    'mbv_rank',
+    0
 );
 
 
@@ -191,7 +202,7 @@ alt="<?php esc_attr_e('Candidate', 'miss-bulgaria-voting'); ?>">
 
 
 
-<?php if($region): ?>
+<?php if(!empty($region) && $region !== 'Other Candidates'): ?>
 
 
 <div class="mbv-region-title">
@@ -256,17 +267,7 @@ alt="<?php esc_attr_e('Candidate', 'miss-bulgaria-voting'); ?>">
 
 
 <div class="mbv-votes">
-
-
-<?php echo intval($votes); ?>
-
-/
-
-<?php echo esc_html($total_votes); ?>
-
-Votes
-
-
+<?php echo intval($votes) . ($has_limit ? ' / ' . esc_html($limit) : '') . ' Votes'; ?>
 </div>
 
 
@@ -275,6 +276,8 @@ Votes
 
 
 
+
+<?php if ($has_limit): ?>
 
 <div class="mbv-percentage">
 
@@ -302,6 +305,8 @@ style="width:<?php echo esc_attr($percentage); ?>%">
 
 
 </div>
+
+<?php endif; ?>
 
 
 
@@ -342,7 +347,7 @@ style="width:<?php echo esc_attr($percentage); ?>%">
 
 
 
-<?php if($votes >= 5000): ?>
+<?php if($is_closed): ?>
 
 <button 
 
@@ -371,6 +376,8 @@ data-candidate-name="<?php echo esc_attr(get_the_title()); ?>"
 data-candidate-image="<?php echo esc_url(get_the_post_thumbnail_url($candidate_id,'large')); ?>"
 
 data-candidate-region="<?php echo esc_attr($region); ?>"
+		
+data-candidate-message="<?php echo esc_attr($final_message); ?>"
 
 >
 
@@ -384,11 +391,9 @@ VOTE
 	
 <div class="mbv-final-path-text">
 
-    <h3>A DIGITAL PATH TO THE MISS BULGARIA FINAL</h3>
 
-    <p>
-        Help talented candidates from every region reach 5,000 votes,
-        complete the mandatory Bootcamp and secure their place in the Grand Final.
+      <p>
+        <?php echo esc_html($final_message); ?>
     </p>
 
 </div>

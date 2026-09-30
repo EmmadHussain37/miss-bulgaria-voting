@@ -127,3 +127,18 @@ delete_option(
 delete_option(
     'mbv_stripe_webhook_secret'
 );
+
+
+delete_option(
+    'mbv_universal_countdown_enable'
+);
+
+
+delete_option(
+    'mbv_universal_countdown_end_date'
+);
+
+
+delete_option(
+    'mbv_max_votes_per_candidate'
+);

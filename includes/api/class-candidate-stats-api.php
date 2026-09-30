@@ -121,25 +121,38 @@ class MBV_Candidate_Stats_API
         );
 
         /*
-        Calculate rank and top votes using efficient direct SQL
+        Calculate rank and top votes using efficient direct SQL with tie handling
         */
+
+        $candidate_post = get_post($candidate_id);
+        $candidate_date = $candidate_post ? $candidate_post->post_date : '1970-01-01 00:00:00';
 
         $higher_voted_count = intval($wpdb->get_var($wpdb->prepare(
             "SELECT COUNT(DISTINCT p.ID) 
              FROM {$wpdb->posts} p
-             INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_mbv_votes'
+             LEFT JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_mbv_votes'
              WHERE p.post_type = 'mbv_candidate' 
                AND p.post_status = 'publish' 
-               AND CAST(pm.meta_value AS UNSIGNED) > %d",
-            $current_votes
+               AND (
+                   COALESCE(CAST(pm.meta_value AS UNSIGNED), 0) > %d
+                   OR (
+                       COALESCE(CAST(pm.meta_value AS UNSIGNED), 0) = %d
+                       AND (p.post_date > %s OR (p.post_date = %s AND p.ID > %d))
+                   )
+               )",
+            $current_votes,
+            $current_votes,
+            $candidate_date,
+            $candidate_date,
+            $candidate_id
         )));
 
         $rank = $higher_voted_count + 1;
 
         $top_votes = intval($wpdb->get_var(
-            "SELECT MAX(CAST(pm.meta_value AS UNSIGNED)) 
+            "SELECT MAX(COALESCE(CAST(pm.meta_value AS UNSIGNED), 0)) 
              FROM {$wpdb->posts} p
-             INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_mbv_votes'
+             LEFT JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_mbv_votes'
              WHERE p.post_type = 'mbv_candidate' 
                AND p.post_status = 'publish'"
         ));

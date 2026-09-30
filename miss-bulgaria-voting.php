@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Miss Bulgaria Voting
- * Plugin URI: https://github.com/EmmadHussain37/Miss-Bulgaria-Voting
+ * Plugin URI: 
  * Description: A complete WordPress voting platform for beauty pageants with candidate management, free voting, paid Stripe voting, leaderboard rankings, and admin statistics.
- * Version: 1.0.0
- * Author: Emmad Hussain
- * Author URI: https://github.com/EmmadHussain37
+ * Version: 1.0.1
+ * Author: Miss Bulgaria
+ * Author URI: 
  * License: GPL-2.0+
  * Text Domain: miss-bulgaria-voting
  */
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 |--------------------------------------------------------------------------
 */
 
-define('MBV_VERSION', '1.0.5');
+define('MBV_VERSION', '1.0.1');
 
 define(
     'MBV_PATH',

@@ -246,7 +246,13 @@ if(!empty($honeypot)){
         }
 
 
-		/*Stop voting when candidate reaches 5000 votes*/
+		/* Check maximum votes per candidate limit if configured */
+
+		$max_votes_setting = get_option('mbv_max_votes_per_candidate', '');
+
+		if ($max_votes_setting !== '' && $max_votes_setting !== false && is_numeric($max_votes_setting)) {
+
+			$limit = intval($max_votes_setting);
 
 			$current_votes = intval(
 				get_post_meta(
@@ -256,22 +262,19 @@ if(!empty($honeypot)){
 				)
 			);
 
-
-			if($current_votes >= 5000){
+			if ($limit > 0 && $current_votes >= $limit) {
 
 				return new WP_Error(
-
 					'voting_closed',
-
-					'Voting has ended for this candidate',
-
+					'This candidate has reached the maximum allowed votes.',
 					array(
-						'status'=>403
+						'status' => 403
 					)
-
 				);
 
 			}
+
+		}
 
 
 
@@ -416,6 +419,10 @@ if(!empty($honeypot)){
         clean_post_cache($candidate_id);
         wp_cache_delete($candidate_id, 'post_meta');
 
+        if (class_exists('MBV_Ranking')) {
+            MBV_Ranking::update_rankings();
+        }
+
         $total_votes = intval(
             get_post_meta(
                 $candidate_id,
@@ -447,20 +454,13 @@ if(!empty($honeypot)){
     {
 
 
-        $query =
-        new WP_Query(array(
-
-            'post_type'=>'mbv_candidate',
-
-            'posts_per_page'=>10,
-
-            'meta_key'=>'_mbv_votes',
-
-            'orderby'=>'meta_value_num',
-
-            'order'=>'DESC'
-
-        ));
+        $query = class_exists('MBV_Ranking')
+            ? MBV_Ranking::get_ranked_candidates(10)
+            : new WP_Query(array(
+                'post_type'      => 'mbv_candidate',
+                'posts_per_page' => 10,
+                'post_status'    => 'publish',
+            ));
 
 
 

@@ -63,10 +63,9 @@ if (!defined('ABSPATH')) {
 
 
 
-        <p>
-            Every vote brings her closer
-            to the Final.
-        </p>
+        <p id="mbv-paid-candidate-message">
+    Every vote brings her closer to the Final.
+</p>
 
 
     </div>

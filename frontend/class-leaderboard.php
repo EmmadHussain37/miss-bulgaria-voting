@@ -38,21 +38,13 @@ class MBV_Leaderboard
 
 
 
-        $query = new WP_Query(array(
-
-            'post_type'=>'mbv_candidate',
-
-            'posts_per_page'=>10,
-
-            'post_status'=>'publish',
-
-            'meta_key'=>'_mbv_votes',
-
-            'orderby'=>'meta_value_num',
-
-            'order'=>'DESC'
-
-        ));
+        $query = class_exists('MBV_Ranking')
+            ? MBV_Ranking::get_ranked_candidates(10)
+            : new WP_Query(array(
+                'post_type'      => 'mbv_candidate',
+                'posts_per_page' => 10,
+                'post_status'    => 'publish',
+            ));
 
 
 

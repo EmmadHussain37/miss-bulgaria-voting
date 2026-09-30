@@ -42,24 +42,48 @@ class MBV_Admin_Columns
     public function columns($columns)
     {
 
+        $new_columns = array();
 
-        $columns['country']='Country';
+        $date = isset($columns['date']) ? $columns['date'] : null;
+        unset($columns['date']);
 
-        $columns['votes']='Votes';
+        foreach ($columns as $key => $title) {
+            $new_columns[$key] = $title;
+            if ($key === 'title') {
+                $new_columns['id'] = 'ID';
+            }
+        }
 
+        if (!isset($new_columns['id'])) {
+            $new_columns['id'] = 'ID';
+        }
 
-        return $columns;
+        $new_columns['country'] = 'Country';
+
+        $new_columns['votes'] = 'Votes';
+
+        if ($date !== null) {
+            $new_columns['date'] = $date;
+        }
+
+        return $new_columns;
 
     }
 
 
 
 
-    public function column_data($column,$post_id)
+    public function column_data($column, $post_id)
     {
 
+        if ($column == 'id' || $column == 'candidate_id') {
 
-        if($column=='country'){
+            echo esc_html($post_id);
+
+        }
+
+
+        if ($column == 'country') {
 
 
             echo esc_html(
@@ -75,7 +99,7 @@ class MBV_Admin_Columns
 
 
 
-        if($column=='votes'){
+        if ($column == 'votes') {
 
 
             echo intval(

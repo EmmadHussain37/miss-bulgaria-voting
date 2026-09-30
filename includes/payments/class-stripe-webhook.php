@@ -355,24 +355,27 @@ class MBV_Stripe_Webhook
 
 
 
-        if(
-            ($current_votes + $votes) > 5000
-        ){
+        $max_votes_setting = get_option('mbv_max_votes_per_candidate', '');
 
-            $allowed_votes =
-            5000 - $current_votes;
+        if ($max_votes_setting !== '' && $max_votes_setting !== false && is_numeric($max_votes_setting)) {
 
-        }
+            $limit = intval($max_votes_setting);
 
+            if ($limit > 0) {
 
+                if (($current_votes + $votes) > $limit) {
 
+                    $allowed_votes = $limit - $current_votes;
 
+                }
 
-        if(
-            $allowed_votes <= 0
-        ){
+                if ($allowed_votes <= 0) {
 
-            return;
+                    return;
+
+                }
+
+            }
 
         }
 
@@ -507,10 +510,9 @@ class MBV_Stripe_Webhook
         clean_post_cache($candidate_id);
         wp_cache_delete($candidate_id, 'post_meta');
 
-
-
-
-
+        if (class_exists('MBV_Ranking')) {
+            MBV_Ranking::update_rankings();
+        }
 
     }
 

@@ -11,23 +11,23 @@
     --mbv-muted:#b5b5b5;
 }
 
-.mbv-card:hover {
+body .mbv-card:hover{
     transform: translateY(-10px);
     border-color: var(--mbv-gold);
 }
 
-.mbv-card h2 {
+body .mbv-card h2{
     color: var(--mbv-text);
     font-size: 24px;
     margin-top: 20px;
 }
 
-.mbv-card p {
+body .mbv-card p{
     color: var(--mbv-muted);
     font-size: 16px;
 }
 
-.mbv-vote-btn {
+body .mbv-vote-btn{
     background: transparent;
     color: var(--mbv-gold);
     border: 2px solid var(--mbv-gold);
@@ -38,35 +38,35 @@
     transition: .3s;
 }
 
-.mbv-vote-btn:hover {
+body .mbv-vote-btn:hover{
     background: var(--mbv-gold);
     color: #000;
     transform: scale(1.05);
 }
 
-.mbv-buy-votes:hover {
+body .mbv-buy-votes:hover{
     background: #D4AF37;
     color: #000;
 }
 
-.mbv-buy-votes.success {
+body .mbv-buy-votes.success{
     background: #D4AF37;
     color: #000;
 }
 
-.mbv-leaderboard {
+body .mbv-leaderboard{
     display: flex;
     flex-direction: column;
     gap: 18px;
     margin-top: 40px;
 }
 
-.mbv-ranking-card:hover {
+body .mbv-ranking-card:hover{
     transform: translateX(8px);
     border-color: #D4AF37;
 }
 
-.mbv-rank-number {
+body .mbv-rank-number{
     width: 60px;
     height: 60px;
     display: flex;
@@ -79,7 +79,7 @@
     font-weight: 700;
 }
 
-.mbv-rank-image img {
+body .mbv-rank-image img{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -87,31 +87,31 @@
     border: 2px solid #D4AF37;
 }
 
-.mbv-rank-info h3 {
+body .mbv-rank-info h3{
     color: #fff;
     margin: 0 0 8px;
     font-size: 22px;
 }
 
-.mbv-rank-info span {
+body .mbv-rank-info span{
     color: #D4AF37;
     font-weight: 700;
 }
 
-.mbv-vote-btn.loading {
+body .mbv-vote-btn.loading{
     position: relative;
     pointer-events: none;
     opacity: .7;
 }
 
-.mbv-buy-votes.loading {
+body .mbv-buy-votes.loading{
     opacity: .7;
     cursor: wait;
     position: relative;
     pointer-events: none;
 }
 
-.mbv-vote-btn.loading::after {
+body .mbv-vote-btn.loading::after{
     content: "";
     width: 16px;
     height: 16px;
@@ -124,7 +124,7 @@
     animation: mbv-spin .8s linear infinite;
 }
 
-.mbv-buy-votes.loading::after {
+body .mbv-buy-votes.loading::after{
     content: "";
     width: 16px;
     height: 16px;
@@ -137,7 +137,7 @@
     animation: mbv-spin .8s linear infinite;
 }
 
-.mbv-modal {
+body .mbv-modal{
     display: none;
     position: fixed;
     inset: 0;
@@ -147,11 +147,11 @@
     justify-content: center;
 }
 
-.mbv-modal.active {
+body .mbv-modal.active{
     display: flex;
 }
 
-.mbv-modal-content {
+body .mbv-modal-content{
     width: 90%;
     max-width: 450px;
     background: #151515;
@@ -161,22 +161,22 @@
     text-align: center;
 }
 
-.mbv-modal-content h2 {
+body .mbv-modal-content h2{
     color: #fff;
 }
 
-.mbv-modal-content p {
+body .mbv-modal-content p{
     color: #b5b5b5;
 }
 
-.mbv-close-modal {
+body .mbv-close-modal{
     color: #D4AF37;
     cursor: pointer;
     font-size: 24px;
     position: absolute;
 }
 
-.mbv-success-popup {
+body .mbv-success-popup{
     position: fixed;
     top: 0;
     left: 0;
@@ -189,11 +189,11 @@
     z-index: 999999;
 }
 
-.mbv-success-popup.active {
+body .mbv-success-popup.active{
     display: flex;
 }
 
-.mbv-success-box {
+body .mbv-success-box{
     position: relative;
     width: 420px;
     max-width: 90%;
@@ -207,18 +207,18 @@
     animation: mbvPopup .35s ease;
 }
 
-.mbv-success-box h2 {
+body .mbv-success-box h2{
     color: #d8af28;
     font-size: 30px;
     margin-bottom: 15px;
 }
 
-.mbv-success-box p {
+body .mbv-success-box p{
     color: #ccc;
     font-size: 16px;
 }
 
-.mbv-success-details {
+body .mbv-success-details{
     margin-top: 25px;
     padding: 20px;
     border-radius: 12px;
@@ -226,12 +226,12 @@
     border: 1px solid #333;
 }
 
-#mbv-success-name {
+body #mbv-success-name{
     color: white;
     font-size: 22px;
 }
 
-#mbv-success-votes {
+body #mbv-success-votes{
     display: block;
     margin-top: 10px;
     color: #d8af28;
@@ -239,32 +239,32 @@
     font-weight: bold;
 }
 
-.mbv-ranking-card.leader {
+body .mbv-ranking-card.leader{
     border-color: #d8af28;
 }
 
-.mbv-ranking-card small {
+body .mbv-ranking-card small{
     display: block;
     margin-top: 8px;
     color: #888;
     font-size: 13px;
 }
 
-.mbv-ranking-card.leader small {
+body .mbv-ranking-card.leader small{
     color: #d8af28;
 }
 
-.mbv-rank-info {
+body .mbv-rank-info{
     flex: 1;
 }
 
-.mbv-ranking-card.voted-candidate {
+body .mbv-ranking-card.voted-candidate{
     border-color: #d8af28;
     box-shadow: 0 0 25px rgba(216,175,40,.5);
     animation: mbvVoteGlow 1.5s infinite alternate;
 }
 
-.mbv-your-vote-badge {
+body .mbv-your-vote-badge{
     display: none !important;
     position: absolute;
     top: 10px;
@@ -277,7 +277,7 @@
     font-weight: bold;
 }
 
-.mbv-ranking-card {
+body .mbv-ranking-card{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -293,99 +293,99 @@
     position: relative;
 }
 
-.mbv-ranking-card.voted-candidate .mbv-your-vote-badge {
+body .mbv-ranking-card.voted-candidate .mbv-your-vote-badge{
     display: block !important;
 }
 
-.mbv-candidates {
+body .mbv-candidates{
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
 }
 
-.mbv-cards {
+body .mbv-cards{
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
 }
 
-.mbv-container {
+body .mbv-container{
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
 }
 
-.mbv-vote-packages {
+body .mbv-vote-packages{
     display: grid !important;
     grid-template-columns: repeat(3,1fr);
     gap: 8px;
 }
 
-.mbv-package {
+body .mbv-package{
     padding: 10px 8px !important;
     min-height: auto !important;
     border-radius: 14px !important;
     height: auto !important;
 }
 
-.mbv-package h3 {
+body .mbv-package h3{
     font-size: 16px !important;
     margin-bottom: 8px !important;
     display: inline !important;
     margin: 0 !important;
 }
 
-.mbv-package-title {
+body .mbv-package-title{
     display: inline !important;
     font-size: 16px !important;
     margin: 0 !important;
 }
 
-.mbv-package h3::after {
+body .mbv-package h3::after{
     content: " • ";
 }
 
-.mbv-package-title::after {
+body .mbv-package-title::after{
     content: " • ";
 }
 
-.mbv-package .votes {
+body .mbv-package .votes{
     font-size: 16px !important;
     display: inline !important;
     font-weight: 700;
 }
 
-.mbv-package .price {
+body .mbv-package .price{
     font-size: 18px !important;
     margin: 8px 0 !important;
     display: block;
     color: #d9af2f !important;
 }
 
-.mbv-package button {
+body .mbv-package button{
     padding: 6px 14px !important;
     font-size: 12px !important;
     border-radius: 30px !important;
     min-height: auto !important;
 }
 
-.mbv-candidates-grid {
+body .mbv-candidates-grid{
     display: grid !important;
     grid-template-columns: repeat(3, minmax(280px,1fr)) !important;
     gap: 20px !important;
-    padding: 40px 20px;
+    padding: 0px 20px 15px;
     align-items: start;
     width: 100% !important;
 }
 
-.mbv-package-card h3:after {
+body .mbv-package-card h3:after{
     content: " • ";
 }
 
-.mbv-buy-votes {
+body .mbv-buy-votes{
     background: transparent;
     color: #D4AF37;
     border: 2px solid #D4AF37;
@@ -397,7 +397,7 @@
     min-height: auto !important;
 }
 
-.mbv-content {
+body .mbv-content{
     padding-top: 5px !important;
     padding: 10px !important;
     flex: 1;
@@ -405,23 +405,23 @@
     flex-direction: column;
 }
 
-.mbv-location span {
+body .mbv-location span{
     color: #ffffff !important;
 }
 
-.mbv-package-card:hover h3 {
+body .mbv-package-card:hover h3{
     color: #111 !important;
 }
 
-.mbv-package-card:hover .mbv-package-votes {
+body .mbv-package-card:hover .mbv-package-votes{
     color: #111 !important;
 }
 
-.mbv-package-card:hover .mbv-package-price {
+body .mbv-package-card:hover .mbv-package-price{
     color: #111 !important;
 }
 
-.mbv-success-close {
+body .mbv-success-close{
     position: absolute !important;
     top: 15px !important;
     right: 15px !important;
@@ -440,14 +440,14 @@
     line-height: 1 !important;
 }
 
-.mbv-success-close:hover {
+body .mbv-success-close:hover{
     background: #d9af2f !important;
     color: #111 !important;
     transform: rotate(90deg);
     transition: .25s ease;
 }
 
-#mbv-vote-again {
+body #mbv-vote-again{
     margin-top: 20px;
     padding: 12px 30px;
     border-radius: 30px;
@@ -459,12 +459,12 @@
     transition: .25s ease;
 }
 
-#mbv-vote-again:hover {
+body #mbv-vote-again:hover{
     background: #d9af2f;
     color: #111;
 }
 
-.mbv-vote-again {
+body .mbv-vote-again{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -478,32 +478,32 @@
     transition: .25s ease;
 }
 
-.mbv-vote-again:hover {
+body .mbv-vote-again:hover{
     background: #d9af2f;
     color: #111;
 }
 
-.mbv-paid-vote-overlay {
+body .mbv-paid-vote-overlay{
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.85);
 }
 
-.mbv-payment-info span {
+body .mbv-payment-info span{
     display: block;
     color: #fff;
     font-size: 11px;
 }
 
-.mbv-paid-candidate-info > div {
+body .mbv-paid-candidate-info > div{
     margin-left: 0;
 }
 
-.mbv-paid-candidate-info h2 {
+body .mbv-paid-candidate-info h2{
     margin-left: 0;
 }
 
-.mbv-package-card:after {
+body .mbv-package-card:after{
     content: "Select";
     border: 1px solid #d4af37;
     border-radius: 20px;
@@ -516,7 +516,7 @@
     width: 60px;
 }
 
-.mbv-paid-candidate-info img {
+body .mbv-paid-candidate-info img{
     width: 130px !important;
     height: 130px !important;
     object-fit: cover;
@@ -525,7 +525,7 @@
     margin: 0 !important;
 }
 
-.mbv-package-card h3 {
+body .mbv-package-card h3{
     color: #fff;
     font-size: 15px !important;
     margin-bottom: 15px;
@@ -537,7 +537,7 @@
     text-align: left;
 }
 
-.mbv-package-votes {
+body .mbv-package-votes{
     color: #fff;
     font-size: 15px !important;
     font-weight: 700 !important;
@@ -548,7 +548,7 @@
     text-align: center;
 }
 
-.mbv-paid-candidate-info p {
+body .mbv-paid-candidate-info p{
     text-align: left;
     font-size: 12px;
     color: #ddd;
@@ -557,18 +557,18 @@
     margin-bottom: 5px !important;
 }
 
-.mbv-candidate-details h2 {
+body .mbv-candidate-details h2{
     margin: 0;
 }
 
-.mbv-candidate-details .mbv-region {
+body .mbv-candidate-details .mbv-region{
     margin: 0;
     font-size: 14px;
     letter-spacing: 2px;
     color: #ffffff;
 }
 
-.mbv-card {
+body .mbv-card{
     background: #111;
     border: 1px solid #c9a227;
     border-radius: 20px;
@@ -588,14 +588,14 @@
     color: #fff;
 }
 
-.mbv-image {
+body .mbv-image{
     height: 350px !important;
     overflow: hidden;
     position: relative;
     margin-bottom: 15px;
 }
 
-.mbv-region-title {
+body .mbv-region-title{
     color: #d4af37;
     font-size: 14px;
     letter-spacing: 3px;
@@ -603,7 +603,7 @@
     margin-bottom: 8px;
 }
 
-.mbv-content h2 {
+body .mbv-content h2{
     margin: 8px 0 4px !important;
     font-size: 22px !important;
     margin-top: 8px !important;
@@ -611,7 +611,7 @@
     color: #fff;
 }
 
-.mbv-region-grid .mbv-card {
+body .mbv-region-grid .mbv-card{
     background: #0d0d0d;
     border: 1px solid #c9a227;
     border-radius: 18px;
@@ -619,47 +619,46 @@
     overflow: hidden;
 }
 
-.mbv-region-grid .mbv-image {
+body .mbv-region-grid .mbv-image{
     width: 100%;
     margin-bottom: 15px;
 }
 
-.mbv-region-grid .mbv-region-title {
+body .mbv-region-grid .mbv-region-title{
     font-size: 11px;
     letter-spacing: 3px;
     margin-bottom: 8px;
     color: #d4af37;
 }
 
-.mbv-region-grid .mbv-content h2 {
+body .mbv-region-grid .mbv-content h2{
     font-size: 24px;
     margin: 8px 0;
 }
 
-.mbv-location {
+body .mbv-location{
     margin-bottom: 8px !important;
     color: #ffffff !important;
     margin: 0 0 8px !important;
     font-size: 14px !important;
 }
 
-.mbv-votes {
+body .mbv-votes{
     color: white;
     font-size: 16px;
     font-weight: 700;
-    margin: 0px 0 0px !important;
-    margin-bottom: 15px !important;
-    margin-top: 12px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
-.mbv-percentage {
+body .mbv-percentage{
     color: #d4af37;
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.mbv-region-grid .mbv-paid-vote-btn {
+body .mbv-region-grid .mbv-paid-vote-btn{
     width: 100%;
     background: #d4af37;
     color: #050505;
@@ -670,20 +669,20 @@
     font-size: 16px;
 }
 
-.mbv-count-1 .mbv-card {
+body .mbv-count-1 .mbv-card{
     max-width: 520px;
     margin: auto;
 }
 
-.mbv-count-2 .mbv-card {
+body .mbv-count-2 .mbv-card{
     max-width: none;
 }
 
-.mbv-count-3 .mbv-card {
+body .mbv-count-3 .mbv-card{
     max-width: none;
 }
 
-.mbv-progress {
+body .mbv-progress{
     width: 100% !important;
     height: 10px;
     background: #252525;
@@ -697,7 +696,7 @@
     box-sizing: border-box;
 }
 
-.mbv-progress-bar {
+body .mbv-progress-bar{
     height: 100%;
     background: linear-gradient(
         90deg,
@@ -709,7 +708,7 @@
     display: block;
 }
 
-.mbv-region-filter {
+body .mbv-region-filter{
     background: #111;
     color: #fff;
     border: 1px solid #c9a227;
@@ -721,18 +720,18 @@
     transition: .3s;
 }
 
-.mbv-region-filter:hover {
+body .mbv-region-filter:hover{
     background: #c9a227;
     color: #000;
 }
 
-.mbv-region-filter.active {
+body .mbv-region-filter.active{
     background: #d4af37;
     color: #000;
     font-weight: bold;
 }
 
-.mbv-region-filters {
+body .mbv-region-filters{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -741,31 +740,31 @@
     column-gap: 15px;
 }
 
-#mbv-paid-vote-popup {
+body #mbv-paid-vote-popup{
     overflow-x: hidden;
 }
 
-#mbv-paid-vote-popup .mbv-content {
+body #mbv-paid-vote-popup .mbv-content{
     display: block;
 }
 
-#mbv-paid-vote-popup .mbv-card {
+body #mbv-paid-vote-popup .mbv-card{
     display: block;
 }
 
-#mbv-paid-vote-popup * {
+body #mbv-paid-vote-popup *{
     box-sizing: border-box;
 }
 
-#mbv-paid-vote-popup .mbv-packages-grid {
+body #mbv-paid-vote-popup .mbv-packages-grid{
     display: block !important;
 }
 
-#mbv-paid-vote-popup .mbv-region-grid {
+body #mbv-paid-vote-popup .mbv-region-grid{
     display: block !important;
 }
 
-#mbv-paid-vote-popup .mbv-package-card {
+body #mbv-paid-vote-popup .mbv-package-card{
     width: 100% !important;
     max-width: 100%;
     box-sizing: border-box;
@@ -777,27 +776,27 @@
     align-items: center !important;
 }
 
-#mbv-paid-vote-popup .mbv-package-card h3 {
+body #mbv-paid-vote-popup .mbv-package-card h3{
     margin: 0 !important;
     font-size: 15px !important;
 }
 
-#mbv-paid-vote-popup .mbv-package-votes {
+body #mbv-paid-vote-popup .mbv-package-votes{
     font-size: 15px !important;
 }
 
-#mbv-paid-vote-popup .mbv-package-price {
+body #mbv-paid-vote-popup .mbv-package-price{
     font-size: 15px !important;
 }
 
-#mbv-paid-vote-popup .mbv-packages {
+body #mbv-paid-vote-popup .mbv-packages{
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
 }
 
-.mbv-paid-vote-close {
+body .mbv-paid-vote-close{
     position: absolute;
     right: 20px;
     top: 14px;
@@ -809,7 +808,7 @@
     cursor: pointer !important;
 }
 
-.mbv-paid-vote-btn {
+body .mbv-paid-vote-btn{
     width: 90%;
     background: #0e0e0e;
     color: #d4af37;
@@ -830,42 +829,52 @@
     margin: auto;
 }
 
-.mbv-paid-vote-btn:hover {
+body .mbv-paid-vote-btn:hover{
     background: #e6c04a;
     color: #000;
     opacity: .85;
     transform: translateY(-1px);
 }
 
-.mbv-paid-vote-btn:active {
+body .mbv-paid-vote-btn:active{
     transform: scale(0.98);
 }
 
-.mbv-paid-vote-btn::before {
+body .mbv-paid-vote-btn::before{
     content: "♥";
     font-size: 16px;
     color: #d4af37;
 }
 
-.mbv-paid-vote-btn:hover::before {
+body .mbv-paid-vote-btn:hover::before{
     color: black;
 }
 
-.mbv-image img {
+body .mbv-image img{
     width: 100% !important;
     height: 350px !important;
     object-fit: cover !important;
     border-radius: 5px !important;
 }
 
-.mbv-candidate-photo {
+body .mbv-candidate-photo{
     height: 350px !important;
     width: 100% !important;
     object-fit: cover !important;
     border-radius: 5px !important;
 }
 
-.mbv-final-path-text {
+@media (min-width: 768px) and (max-width: 1024px) {
+    body .mbv-image img {
+        height: 550px !important;
+    }
+
+    body .mbv-image {
+        height: 550px !important;
+    }
+}
+
+body .mbv-final-path-text{
     text-align: center;
     max-width: 850px;
     margin: 15px auto 10px;
@@ -873,7 +882,7 @@
     padding: 10px 10px 10px 10px;
 }
 
-.mbv-final-path-text h3 {
+body .mbv-final-path-text h3{
     font-size: 12px;
     font-weight: 800;
     color: #d4af37;
@@ -881,14 +890,14 @@
     text-transform: uppercase;
 }
 
-.mbv-final-path-text p {
+body .mbv-final-path-text p{
     font-size: 14px !important;
     color: #ffffff;
     opacity: 0.85;
     margin: 0 auto;
 }
 
-.mbv-countdown {
+body .mbv-countdown{
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
@@ -897,26 +906,26 @@
     margin: 0px 10px 17px 10px;
 }
 
-.mbv-countdown div {
+body .mbv-countdown div{
     display: block !important;
     width: 55px;
     text-align: center;
 }
 
-.mbv-countdown span {
+body .mbv-countdown span{
     display: block;
     font-size: 22px;
     font-weight: 700;
     color: #d4af37;
 }
 
-.mbv-countdown small {
+body .mbv-countdown small{
     display: block;
     color: white;
     font-size: 10px;
 }
 
-.mbv-badge {
+body .mbv-badge{
     position: absolute !important;
     top: 15px;
     right: 15px;
@@ -934,7 +943,7 @@
     border: 1px solid #d4af37;
 }
 
-.mbv-badge.rank-1 {
+body .mbv-badge.rank-1{
     background: linear-gradient(
         145deg,
         #fff3a3,
@@ -944,7 +953,7 @@
     box-shadow: 0 0 15px rgba(212,175,55,0.45);
 }
 
-.mbv-badge.rank-2 {
+body .mbv-badge.rank-2{
     background: linear-gradient(
         145deg,
         #ffffff,
@@ -954,7 +963,7 @@
     box-shadow: 0 0 15px rgba(200,200,200,0.35);
 }
 
-.mbv-badge.rank-3 {
+body .mbv-badge.rank-3{
     background: linear-gradient(
         145deg,
         #ffd2a1,
@@ -964,13 +973,13 @@
     box-shadow: 0 0 15px rgba(184,115,51,0.35);
 }
 
-.mbv-badge:not(.rank-1):not(.rank-2):not(.rank-3) {
+body .mbv-badge:not(.rank-1):not(.rank-2):not(.rank-3){
     background: #111;
     border: 1px solid #d4af37;
     color: #d4af37;
 }
 
-.mbv-voting-closed {
+body .mbv-voting-closed{
     opacity: 0.6;
     cursor: not-allowed;
     background: #222 !important;
@@ -978,7 +987,7 @@
     border-color: #555 !important;
 }
 
-.mbv-paid-candidate-info {
+body .mbv-paid-candidate-info{
     text-align: left;
     color: #fff;
     display: flex !important;
@@ -990,7 +999,7 @@
     background: #050505;
 }
 
-.mbv-buy-title {
+body .mbv-buy-title{
     text-align: center;
     font-size: 24px !important;
     color: #d4af37;
@@ -1000,11 +1009,11 @@
     margin-bottom: 12px !important;
 }
 
-.mbv-personal-message {
+body .mbv-personal-message{
     padding: 15px 0;
 }
 
-.mbv-personal-message label {
+body .mbv-personal-message label{
     display: block;
     color: #d4af37;
     font-size: 13px;
@@ -1012,7 +1021,7 @@
     margin-bottom: 10px;
 }
 
-#mbv-personal-message {
+body #mbv-personal-message{
     width: 100%;
     min-height: 100px;
     background: #080808;
@@ -1023,11 +1032,11 @@
     box-sizing: border-box;
 }
 
-#mbv-personal-message::placeholder {
+body #mbv-personal-message::placeholder{
     color: #777;
 }
 
-.mbv-payment-info {
+body .mbv-payment-info{
     display: flex !important;
     justify-content: space-around !important;
     margin-top: 0px;
@@ -1036,18 +1045,18 @@
     padding: 10px;
 }
 
-.mbv-payment-info div {
+body .mbv-payment-info div{
     text-align: center;
     font-size: 12px;
     color: white;
 }
 
-.mbv-payment-icon {
+body .mbv-payment-icon{
     display: block;
     margin-bottom: 10px;
 }
 
-.mbv-payment-icon svg {
+body .mbv-payment-icon svg{
     width: 30px;
     height: 30px;
     fill: none;
@@ -1055,7 +1064,7 @@
     stroke-width: 1.5;
 }
 
-.mbv-footer-brand {
+body .mbv-footer-brand{
     text-align: center;
     margin-top: 0px;
     color: #d4af37;
@@ -1064,7 +1073,7 @@
     padding: 10px;
 }
 
-.mbv-candidate-image-wrapper {
+body .mbv-candidate-image-wrapper{
     width: 45%;
     height: 235px !important;
     flex-shrink: 0;
@@ -1072,7 +1081,7 @@
     border-radius: 12px;
 }
 
-#mbv-paid-candidate-image {
+body #mbv-paid-candidate-image{
     width: 100% !important;
     height: 250px !important;
     object-fit: cover !important;
@@ -1080,23 +1089,23 @@
     border-radius: 0 !important;
 }
 
-.mbv-candidate-details {
+body .mbv-candidate-details{
     display: flex;
     flex-direction: column;
     gap: 4px;
     width: 55%;
-    padding: 20px 25px !important;
+    padding: 5px 0px !important;
     justify-content: center !important;
     align-items: flex-start !important;
     text-align: left !important;
 }
 
-.mbv-popup-mini-brand {
+body .mbv-popup-mini-brand{
     text-align: left !important;
     margin-bottom: 18px !important;
 }
 
-.mbv-popup-mini-brand h4 {
+body .mbv-popup-mini-brand h4{
     margin: 0 !important;
     color: #d4af37 !important;
     font-size: 14px !important;
@@ -1104,13 +1113,13 @@
     font-weight: 500 !important;
 }
 
-.mbv-popup-mini-brand span {
+body .mbv-popup-mini-brand span{
     color: #d4af37 !important;
     font-size: 10px !important;
     letter-spacing: 3px !important;
 }
 
-.mbv-support {
+body .mbv-support{
     text-align: left;
     letter-spacing: 5px !important;
     color: #d4af37 !important;
@@ -1118,7 +1127,7 @@
     margin-bottom: 10px !important;
 }
 
-#mbv-paid-candidate-name {
+body #mbv-paid-candidate-name{
     font-size: 32px !important;
     color: #d4af37 !important;
     text-align: left;
@@ -1127,14 +1136,14 @@
     line-height: 1.1 !important;
 }
 
-.mbv-region {
+body .mbv-region{
     color: white !important;
     font-size: 15px !important;
     letter-spacing: 2px !important;
     margin-bottom: 10px !important;
 }
 
-.mbv-candidate-details p {
+body .mbv-candidate-details p{
     margin: 0 !important;
     color: #ddd !important;
     font-size: 13px !important;
@@ -1142,7 +1151,7 @@
     text-align: left !important;
 }
 
-.mbv-paid-vote-popup {
+body .mbv-paid-vote-popup{
     display: none;
     position: fixed;
     inset: 0;
@@ -1152,26 +1161,26 @@
     overflow: hidden !important;
 }
 
-.mbv-paid-vote-content::-webkit-scrollbar {
+body .mbv-paid-vote-content::-webkit-scrollbar{
     width: 8px;
 }
 
-.mbv-paid-vote-content::-webkit-scrollbar-track {
+body .mbv-paid-vote-content::-webkit-scrollbar-track{
     background: #0a0a0a;
     border-radius: 20px;
 }
 
-.mbv-paid-vote-content::-webkit-scrollbar-thumb {
+body .mbv-paid-vote-content::-webkit-scrollbar-thumb{
     background: #d4af37;
     border-radius: 20px;
     border: 2px solid #050505;
 }
 
-.mbv-paid-vote-content::-webkit-scrollbar-thumb:hover {
+body .mbv-paid-vote-content::-webkit-scrollbar-thumb:hover{
     background: #f2d06b;
 }
 
-.mbv-paid-vote-content {
+body .mbv-paid-vote-content{
     position: relative;
     width: 620px !important;
     max-width: 95%;
@@ -1191,7 +1200,7 @@
     scrollbar-color: #d4af37 #0a0a0a;
 }
 
-.mbv-package-card:hover {
+body .mbv-package-card:hover{
     transform: translateY(-2px);
     border-color: #d4af37;
     box-shadow: 0 15px 40px rgba(212,175,55,.15);
@@ -1199,12 +1208,12 @@
     color: #111 !important;
 }
 
-.mbv-package-select:hover {
+body .mbv-package-select:hover{
     background: #d4af37;
     color: #050505;
 }
 
-.mbv-packages {
+body .mbv-packages{
     display: flex !important;
     grid-template-columns: repeat(3,1fr) !important;
     gap: 12px !important;
@@ -1212,33 +1221,34 @@
     flex-direction: column !important;
 }
 
-.mbv-package-card button {
+body .mbv-package-card button{
     box-shadow: none !important;
     text-transform: none !important;
 }
 
-.mbv-ultimate-label {
+body .mbv-ultimate-label{
     position: absolute !important;
     top: -12px !important;
     right: 15px !important;
     background: #d4af37 !important;
     color: #000 !important;
-    padding: 5px 12px !important;
+    padding: 0px 10px !important;
     border-radius: 20px !important;
     font-size: 10px !important;
     font-weight: 700 !important;
     letter-spacing: 1px !important;
+	    line-height: 22px !important;
 }
 
-.mbv-package-card > .mbv-package-select + .mbv-package-select {
+body .mbv-package-card > .mbv-package-select + .mbv-package-select{
     display: none !important;
 }
 
-.mbv-package-info h3::after {
+body .mbv-package-info h3::after{
     content: "" !important;
 }
 
-.mbv-package-select {
+body .mbv-package-select{
     background: transparent !important;
     color: #ffffff !important;
     border: 1px solid #d4af37 !important;
@@ -1252,7 +1262,7 @@
     align-self: center !important;
 }
 
-.mbv-package-card {
+body .mbv-package-card{
     background: #080808 !important;
     border: 2px solid #d4af37 !important;
     border-radius: 15px !important;
@@ -1272,7 +1282,7 @@
     gap: 15px;
 }
 
-.mbv-package-info {
+body .mbv-package-info{
     flex: 1 !important;
     display: flex !important;
     align-items: center !important;
@@ -1281,7 +1291,7 @@
     flex-wrap: nowrap !important;
 }
 
-.mbv-package-price {
+body .mbv-package-price{
     color: #d4af37 !important;
     font-size: 18px !important;
     margin: 0 !important;
@@ -1295,7 +1305,7 @@
     line-height: 1.2 !important;
 }
 
-.mbv-price-per-vote {
+body .mbv-price-per-vote{
     color: #aaa !important;
     font-size: 11px !important;
     margin-top: 3px !important;
@@ -1305,7 +1315,7 @@
     text-align: center;
 }
 
-.mbv-package-icon {
+body .mbv-package-icon{
     width: auto !important;
     height: 45px;
     display: flex;
@@ -1316,7 +1326,7 @@
     margin-right: 8px !important;
 }
 
-.mbv-package-info h3 {
+body .mbv-package-info h3{
     margin: 0 !important;
     color: #ffffff !important;
     font-size: 16px !important;
@@ -1380,7 +1390,7 @@ from {
 
 @media (min-width: 601px) {
 
-    .mbv-candidate-details {
+    body .mbv-candidate-details{
         text-align: left;
     }
 
@@ -1388,7 +1398,7 @@ from {
 
 @media (max-width: 900px) {
 
-    .mbv-candidates-grid {
+    body .mbv-candidates-grid{
         grid-template-columns: repeat(2,1fr) !important;
     }
 
@@ -1396,54 +1406,54 @@ from {
 
 @media (max-width: 768px) {
 
-    .mbv-image {
+    body .mbv-image{
         height: 220px;
     }
 
-    .mbv-card h2 {
+    body .mbv-card h2{
         font-size: 18px;
     }
 
-    .mbv-vote-btn {
+    body .mbv-vote-btn{
         padding: 10px 20px;
         font-size: 14px;
     }
 
-    .mbv-card {
+    body .mbv-card{
         border-radius: 15px;
         width: 100% !important;
     }
 
-    .mbv-candidate-photo {
+    body .mbv-candidate-photo{
         height: 220px !important;
     }
 
-    .mbv-candidates {
+    body .mbv-candidates{
         grid-template-columns: 1fr;
     }
 
-    .mbv-cards {
+    body .mbv-cards{
         grid-template-columns: 1fr;
     }
 
-    .mbv-container {
+    body .mbv-container{
         grid-template-columns: 1fr;
     }
 
-    .mbv-vote-packages {
+    body .mbv-vote-packages{
         grid-template-columns: repeat(2,1fr);
     }
 
-    .mbv-candidates-grid {
+    body .mbv-candidates-grid{
         grid-template-columns: 1fr !important;
         gap: 15px;
     }
 
-    .mbv-packages {
+    body .mbv-packages{
         grid-template-columns: repeat(2,1fr) !important;
     }
 
-    .mbv-region-filters {
+    body .mbv-region-filters{
         display: flex;
         gap: 12px;
         overflow-x: auto;
@@ -1453,11 +1463,11 @@ from {
         -webkit-overflow-scrolling: touch;
     }
 
-    .mbv-region-filters::-webkit-scrollbar {
+    body .mbv-region-filters::-webkit-scrollbar{
         display: none;
     }
 
-    .mbv-region-filters button {
+    body .mbv-region-filters button{
         flex: 0 0 auto;
         min-width: auto;
         padding: 10px 22px;
@@ -1468,36 +1478,36 @@ from {
 
 @media (max-width: 700px) {
 
-    .mbv-paid-candidate-info {
+    body .mbv-paid-candidate-info{
         flex-direction: column;
     }
 
-    .mbv-buy-title {
+    body .mbv-buy-title{
         font-size: 28px;
     }
 
-    .mbv-candidate-image-wrapper {
+    body .mbv-candidate-image-wrapper{
         width: 100%;
         height: 220px !important;
     }
 
-    #mbv-paid-candidate-image {
+    body #mbv-paid-candidate-image{
         height: 240px !important;
     }
 
-    .mbv-popup-mini-brand h4 {
+    body .mbv-popup-mini-brand h4{
         font-size: 13px !important;
         letter-spacing: 4px !important;
         margin: 0 !important;
     }
 
-    .mbv-popup-mini-brand span {
+    body .mbv-popup-mini-brand span{
         display: block;
         font-size: 9px !important;
         letter-spacing: 3px !important;
     }
 
-    .mbv-candidate-details {
+    body .mbv-candidate-details{
         width: 100%;
         padding: 8px 0 !important;
         display: block !important;
@@ -1506,7 +1516,7 @@ from {
         gap: 0;
     }
 
-    .mbv-popup-mini-brand {
+    body .mbv-popup-mini-brand{
         grid-column: 1;
         grid-row: 1;
         margin: 0 !important;
@@ -1514,7 +1524,7 @@ from {
         display: inline-block !important;
     }
 
-    .mbv-support {
+    body .mbv-support{
         grid-column: 2;
         grid-row: 1;
         align-self: center;
@@ -1526,7 +1536,7 @@ from {
         margin-top: 5px !important;
     }
 
-    #mbv-paid-candidate-name {
+    body #mbv-paid-candidate-name{
         font-size: 30px !important;
         grid-column: 1;
         grid-row: 2;
@@ -1535,7 +1545,7 @@ from {
         display: block !important;
     }
 
-    .mbv-region {
+    body .mbv-region{
         grid-column: 2;
         grid-row: 2;
         align-self: center;
@@ -1546,7 +1556,7 @@ from {
         display: block !important;
     }
 
-    .mbv-candidate-details p {
+    body .mbv-candidate-details p{
         grid-column: 1 / 3;
         grid-row: 3;
         margin: 8px 0 0 !important;
@@ -1556,42 +1566,42 @@ from {
         margin-top: 5px !important;
     }
 
-    .mbv-package-icon {
+    body .mbv-package-icon{
         margin-right: 8px !important;
         font-size: 24px !important;
     }
 
-    #mbv-paid-vote-popup .mbv-package-card {
+    body #mbv-paid-vote-popup .mbv-package-card{
         padding: 0 8px !important;
     }
 
-    .mbv-package-card {
+    body .mbv-package-card{
         padding: 10px 8px !important;
         min-height: 55px !important;
         border-radius: 12px !important;
         gap: 5px !important;
     }
 
-    .mbv-package-info {
+    body .mbv-package-info{
         gap: 5px !important;
         margin-left: 0 !important;
     }
 
-    .mbv-package-info h3 {
+    body .mbv-package-info h3{
         font-size: 13px !important;
         letter-spacing: 0 !important;
         white-space: nowrap !important;
         line-height: 1.2 !important;
     }
 
-    .mbv-package-price {
+    body .mbv-package-price{
         font-size: 14px !important;
         margin-right: 8px !important;
         margin: 0 !important;
         white-space: nowrap !important;
     }
 
-    .mbv-price-per-vote {
+    body .mbv-price-per-vote{
         left: 85px !important;
         bottom: 4px !important;
         font-size: 10px !important;
@@ -1599,14 +1609,14 @@ from {
         margin-left: 2px !important;
     }
 
-    .mbv-package-select {
+    body .mbv-package-select{
         padding: 6px 12px !important;
         font-size: 11px !important;
         white-space: nowrap !important;
         border-radius: 20px !important;
     }
 
-    .mbv-ultimate-label {
+    body .mbv-ultimate-label{
         top: -10px !important;
         right: 8px !important;
         padding: 4px 10px !important;
@@ -1617,40 +1627,40 @@ from {
 
 @media (max-width: 600px) {
 
-    .mbv-ranking-card {
+    body .mbv-ranking-card{
         padding: 15px;
         gap: 12px;
     }
 
-    .mbv-rank-number {
+    body .mbv-rank-number{
         width: 45px;
         height: 45px;
         font-size: 16px;
     }
 
-    .mbv-rank-image img {
+    body .mbv-rank-image img{
         width: 55px;
         height: 55px;
     }
 
-    .mbv-candidates-grid {
+    body .mbv-candidates-grid{
         padding: 20px 10px;
         grid-template-columns: 1fr !important;
     }
 
-    .mbv-card {
+    body .mbv-card{
         width: 100% !important;
     }
 
-    .mbv-image {
+    body .mbv-image{
         height: 220px !important;
     }
 
-    .mbv-image img {
+    body .mbv-image img{
         height: 220px !important;
     }
 
-    .mbv-packages {
+    body .mbv-packages{
         grid-template-columns: repeat(2,1fr) !important;
         display: flex !important;
         flex-direction: column !important;
@@ -1659,110 +1669,110 @@ from {
         margin-top: 15px !important;
     }
 
-    #mbv-payment-success {
+    body #mbv-payment-success{
         padding: 15px !important;
         align-items: center !important;
         justify-content: center !important;
     }
 
-    .mbv-success-box {
+    body .mbv-success-box{
         width: 100% !important;
         max-width: 360px !important;
         padding: 25px 18px !important;
         border-radius: 18px !important;
     }
 
-    .mbv-success-box h2 {
+    body .mbv-success-box h2{
         font-size: 24px !important;
         line-height: 1.3 !important;
         margin-bottom: 12px !important;
     }
 
-    .mbv-success-box p {
+    body .mbv-success-box p{
         font-size: 14px !important;
         margin-bottom: 18px !important;
     }
 
-    .mbv-success-details {
+    body .mbv-success-details{
         padding: 18px 12px !important;
         border-radius: 12px !important;
     }
 
-    #mbv-success-name {
+    body #mbv-success-name{
         font-size: 20px !important;
     }
 
-    #mbv-success-votes {
+    body #mbv-success-votes{
         font-size: 18px !important;
     }
 
-    #mbv-success-total {
+    body #mbv-success-total{
         font-size: 14px !important;
         margin-top: 6px !important;
     }
 
-    #mbv-success-rank {
+    body #mbv-success-rank{
         font-size: 14px !important;
         margin-top: 6px !important;
     }
 
-    #mbv-success-needed {
+    body #mbv-success-needed{
         font-size: 14px !important;
         margin-top: 6px !important;
     }
 
-    .mbv-success-close {
+    body .mbv-success-close{
         top: 12px !important;
         right: 12px !important;
         width: 32px !important;
         height: 32px !important;
     }
 
-    .mbv-paid-vote-content {
+    body .mbv-paid-vote-content{
         width: 94% !important;
         padding: 16px !important;
         max-height: 88vh;
         border-radius: 20px;
     }
 
-    .mbv-paid-candidate-info {
+    body .mbv-paid-candidate-info{
         flex-direction: column;
         text-align: center;
         gap: 5px !important;
         margin-bottom: 0 !important;
     }
 
-    .mbv-paid-candidate-info img {
+    body .mbv-paid-candidate-info img{
         width: 45px !important;
         height: 45px !important;
     }
 
-    .mbv-support {
+    body .mbv-support{
         text-align: center;
         margin-top: 4px;
         font-size: 10px !important;
     }
 
-    #mbv-paid-candidate-name {
+    body #mbv-paid-candidate-name{
         text-align: center;
         font-size: 24px !important;
         margin: 3px 0 !important;
     }
 
-    .mbv-paid-candidate-info p {
+    body .mbv-paid-candidate-info p{
         text-align: center;
         margin: 4px 0 !important;
         font-size: 12px !important;
     }
 
-    .mbv-buy-title {
+    body .mbv-buy-title{
         font-size: 26px !important;
         margin-top: 5px !important;
         margin-bottom: 10px !important;
         margin: 8px 0 12px !important;
     }
 
-    .mbv-paid-vote-close {
+    body .mbv-paid-vote-close{
         top: 15px !important;
         right: 15px !important;
         width: 32px !important;
@@ -1774,7 +1784,7 @@ from {
         z-index: 10;
     }
 
-    .mbv-package-votes {
+    body .mbv-package-votes{
         font-size: 13px !important;
         white-space: nowrap !important;
         display: block !important;
@@ -1782,7 +1792,7 @@ from {
         text-align: center;
     }
 
-    .mbv-package-card {
+    body .mbv-package-card{
         width: 100% !important;
         min-height: 38px !important;
         padding: 10px 12px !important;
@@ -1793,14 +1803,14 @@ from {
         gap: 8px;
     }
 
-    .mbv-package-card h3 {
+    body .mbv-package-card h3{
         font-size: 13px !important;
         white-space: nowrap !important;
         flex: 1 !important;
         min-width: 0;
     }
 
-    .mbv-package-price {
+    body .mbv-package-price{
         margin: 0 !important;
         font-size: 13px !important;
         color: #d9af2f !important;
@@ -1810,32 +1820,32 @@ from {
         text-align: center;
     }
 
-    .mbv-package-card:after {
+    body .mbv-package-card:after{
         width: auto !important;
         padding: 5px 4px !important;
         font-size: 11px !important;
         flex: 0 0 55px;
     }
 
-    .mbv-candidate-details {
+    body .mbv-candidate-details{
         text-align: center;
     }
 
-    .mbv-candidate-photo {
+    body .mbv-candidate-photo{
         width: 160px;
         height: 160px;
     }
 
-    .mbv-content h2 {
+    body .mbv-content h2{
         font-size: 22px !important;
     }
 
-    .mbv-region-filters {
+    body .mbv-region-filters{
         gap: 8px;
         margin: 20px 0 25px;
     }
 
-    .mbv-region-filter {
+    body .mbv-region-filter{
         padding: 8px 18px;
         font-size: 13px;
     }
@@ -1844,19 +1854,19 @@ from {
 
 @media (max-width: 480px) {
 
-    .mbv-candidate-photo {
+    body .mbv-candidate-photo{
         height: 200px !important;
     }
 
-    .mbv-content h2 {
+    body .mbv-content h2{
         font-size: 20px !important;
     }
 
-    .mbv-vote-packages {
+    body .mbv-vote-packages{
         grid-template-columns: 1fr;
     }
 
-    .mbv-packages {
+    body .mbv-packages{
         grid-template-columns: 1fr !important;
     }
 
@@ -1864,1819 +1874,197 @@ from {
 
 @media (max-width: 450px) {
 
-    .mbv-candidates-grid {
+    body .mbv-candidates-grid{
         grid-template-columns: 1fr;
     }
 
-    .mbv-image {
+    body .mbv-image{
         height: 280px;
     }
 
 }
 
 
-/* ===============================
-   MISS BULGARIA BUTTON RESET
-   PREVENT THEME OVERRIDES
-================================ */
-
-body .mbv-paid-vote-btn {
-    appearance: none;
-    -webkit-appearance: none;
-
-    padding: 12px 25px !important;
-    min-height: auto !important;
-    height: auto !important;
-
-    border-radius: 50px !important;
-
-    border: 1px solid #d4af37 !important;
-
-    background: transparent !important;
-
-    color: #d4af37 !important;
-
-    font-family: inherit !important;
-    font-size: 14px !important;
-
-    line-height: 1.2 !important;
-
-    box-shadow: none !important;
-
-    text-transform: uppercase;
+/* TEST OVERRIDE */
+body .mbv-candidate-card{
+    border-radius: 30px !important;
+    overflow:hidden !important;
 }
 
-
-body .mbv-paid-vote-btn:hover {
-    background:#d4af37 !important;
-    color:#000 !important;
+body .mbv-candidate-card img{
+    border-radius:20px !important;
 }
 
-
-/* ==========================================================================
-   THEME COMPATIBILITY LAYER (WORDPRESS THEME & ELEMENTOR CONFLICT DEFENSE)
-   Protects all Miss Bulgaria Voting System components from external theme overrides.
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Candidate Cards Protection
-   -------------------------------------------------------------------------- */
-body .mbv-card {
-    background: #111111 !important;
-    border: 1px solid #c9a227 !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    text-align: center !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    min-height: 0 !important;
-    position: relative !important;
-    color: #ffffff !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-    box-sizing: border-box !important;
-    transition: transform 0.4s ease, border-color 0.4s ease !important;
-    margin: 0 !important;
+body .mbv-vote-button{
+    border-radius:50px !important;
 }
 
-body .mbv-card:hover {
-    transform: translateY(-10px) !important;
-    border-color: #d4af37 !important;
+/* ==========================================================
+   FINAL ANITA + ELEMENTOR COMPATIBILITY LAYER
+   MISS BULGARIA VOTING SYSTEM
+   Keep this section at the absolute bottom
+========================================================== */
+
+/* Elementor shortcode context + theme protection */
+body .elementor-widget-shortcode .mbv-wrapper,
+body .elementor-widget-shortcode .mbv-wrapper *,
+body .elementor .mbv-wrapper,
+body .elementor .mbv-wrapper * {
+    box-sizing: border-box;
 }
 
-body .mbv-card .mbv-image {
-    width: 100% !important;
-    height: 350px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    margin: 0 0 15px 0 !important;
-    padding: 0 !important;
-    display: block !important;
+/* Candidate cards */
+body .elementor .mbv-candidate-card,
+body .elementor-widget-shortcode .mbv-candidate-card,
+body .mbv-candidate-card {
     box-sizing: border-box !important;
 }
 
-body .mbv-card .mbv-content {
-    padding: 10px !important;
-    padding-top: 5px !important;
-    flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    background: transparent !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
+/* Images */
+body .elementor .mbv-candidate-card img,
+body .elementor-widget-shortcode .mbv-candidate-card img,
+body .mbv-candidate-card img {
+    max-width:100% !important;
+    height:auto;
 }
 
-body .mbv-card .mbv-region-title {
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-}
-
-body .mbv-card .mbv-content h2 {
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    margin: 8px 0 5px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-}
-
-body .mbv-card .mbv-location {
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-}
-
-body .mbv-card .mbv-location span {
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    display: inline !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.4 !important;
-}
-
-body .mbv-card .mbv-votes {
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    margin: 12px 0 15px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-    text-transform: none !important;
-}
-
-body .mbv-card .mbv-percentage {
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    margin: 10px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-}
-
-body .mbv-card .mbv-progress {
-    width: 100% !important;
-    max-width: none !important;
-    height: 10px !important;
-    background: #252525 !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    margin: 12px 0 18px 0 !important;
-    padding: 0 !important;
-    border: 1px solid #333333 !important;
-    display: block !important;
-    box-sizing: border-box !important;
-}
-
-body .mbv-card .mbv-progress .mbv-progress-bar {
-    height: 100% !important;
-    background: linear-gradient(90deg, #b8860b, #f5d76e) !important;
-    border-radius: 20px !important;
-    border: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    box-sizing: border-box !important;
-    transition: width 0.5s ease !important;
-}
-
-body .mbv-card .mbv-countdown {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 12px !important;
-    margin: 0 10px 17px 10px !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body .mbv-card .mbv-countdown div {
-    display: block !important;
-    width: 55px !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body .mbv-card .mbv-countdown span {
-    display: block !important;
-    font-family: inherit !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    color: #d4af37 !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-countdown small {
-    display: block !important;
-    font-family: inherit !important;
-    color: #ffffff !important;
-    font-size: 10px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-    letter-spacing: normal !important;
-}
-
-body .mbv-card .mbv-final-path-text {
-    text-align: center !important;
-    max-width: 850px !important;
-    margin: 15px auto 10px auto !important;
-    border-top: 1px solid #242424 !important;
-    border-bottom: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    padding: 10px !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-}
-
-body .mbv-card .mbv-final-path-text h3 {
-    font-family: inherit !important;
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    color: #d4af37 !important;
-    margin: 0 0 5px 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-    line-height: 1.3 !important;
-    letter-spacing: normal !important;
-    text-align: center !important;
-}
-
-body .mbv-card .mbv-final-path-text p {
-    font-family: inherit !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    color: #ffffff !important;
-    opacity: 0.85 !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-}
-
-body .mbv-card .mbv-badge {
-    position: absolute !important;
-    top: 15px !important;
-    right: 15px !important;
-    z-index: 5 !important;
-    width: 48px !important;
-    height: 48px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 50% !important;
-    font-weight: 700 !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-    border: 1px solid #d4af37 !important;
-    box-sizing: border-box !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-
-/* --------------------------------------------------------------------------
-   2. Buttons Protection
-   -------------------------------------------------------------------------- */
-
-/* Paid vote button (.mbv-paid-vote-btn) */
+/* Buttons - beat Anita global button selectors */
+body .elementor-widget-shortcode button.mbv-paid-vote-btn,
+body .elementor button.mbv-paid-vote-btn,
 body button.mbv-paid-vote-btn,
-body .mbv-card .mbv-paid-vote-btn,
-body .mbv-paid-vote-btn {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    width: 90% !important;
-    height: 52px !important;
-    min-height: auto !important;
-    margin: auto !important;
-    padding: 12px 25px !important;
-    border: 1px solid #d4af37 !important;
-    border-radius: 50px !important;
-    background: transparent !important;
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    letter-spacing: normal !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    outline: none !important;
-    transition: all 0.3s ease !important;
-}
-
-body button.mbv-paid-vote-btn:hover,
-body .mbv-card .mbv-paid-vote-btn:hover,
-body .mbv-paid-vote-btn:hover {
-    background: #d4af37 !important;
-    color: #000000 !important;
-    border-color: #d4af37 !important;
-    box-shadow: none !important;
-    transform: translateY(-1px) !important;
-    opacity: 1 !important;
-}
-
-body button.mbv-paid-vote-btn:active,
-body .mbv-card .mbv-paid-vote-btn:active,
-body .mbv-paid-vote-btn:active {
-    transform: scale(0.98) !important;
-}
-
-body .mbv-paid-vote-btn::before {
-    content: "♥" !important;
-    font-size: 16px !important;
-    color: #d4af37 !important;
-    display: inline-block !important;
-    line-height: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transition: color 0.3s ease !important;
-}
-
-body .mbv-paid-vote-btn:hover::before {
-    color: #000000 !important;
-}
-
-body button.mbv-paid-vote-btn:disabled,
-body button.mbv-paid-vote-btn.mbv-voting-closed,
-body .mbv-paid-vote-btn:disabled,
-body .mbv-paid-vote-btn.mbv-voting-closed {
-    opacity: 0.6 !important;
-    cursor: not-allowed !important;
-    background: #222222 !important;
-    color: #d4af37 !important;
-    border-color: #555555 !important;
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-body .mbv-paid-vote-btn:disabled::before,
-body .mbv-paid-vote-btn.mbv-voting-closed::before {
-    color: #d4af37 !important;
-}
-
-/* Region filters (.mbv-region-filter) */
-body .mbv-region-filters button.mbv-region-filter,
-body button.mbv-region-filter,
-body .mbv-region-filter {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    background: #111111 !important;
-    color: #ffffff !important;
-    border: 1px solid #c9a227 !important;
-    border-radius: 25px !important;
-    padding: 10px 30px !important;
-    margin: 0 !important;
-    font-family: inherit !important;
-    font-size: 15px !important;
-    font-weight: normal !important;
-    letter-spacing: 1px !important;
-    line-height: 1.2 !important;
-    text-transform: none !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    outline: none !important;
-    height: auto !important;
-    min-height: auto !important;
-    display: inline-block !important;
-    text-decoration: none !important;
-    transition: 0.3s ease !important;
-}
-
-body .mbv-region-filters button.mbv-region-filter:hover,
-body button.mbv-region-filter:hover,
-body .mbv-region-filter:hover {
-    background: #c9a227 !important;
-    color: #000000 !important;
-    border-color: #c9a227 !important;
-    box-shadow: none !important;
-}
-
-body .mbv-region-filters button.mbv-region-filter.active,
-body button.mbv-region-filter.active,
-body .mbv-region-filter.active {
-    background: #d4af37 !important;
-    color: #000000 !important;
-    border-color: #d4af37 !important;
-    font-weight: bold !important;
-    box-shadow: none !important;
-}
-
-/* Free vote button (.mbv-vote-btn) */
 body button.mbv-vote-btn,
-body .mbv-vote-btn {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-    color: #d4af37 !important;
-    border: 2px solid #d4af37 !important;
-    padding: 12px 35px !important;
-    border-radius: 50px !important;
-    cursor: pointer !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-weight: normal !important;
-    line-height: 1.2 !important;
-    text-transform: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    height: auto !important;
-    min-height: auto !important;
-    transition: 0.3s ease !important;
-    margin: 0 !important;
+body button.mbv-region-filter,
+body button.mbv-package-select {
+    appearance:none !important;
+    -webkit-appearance:none !important;
+    font-family:inherit !important;
+    letter-spacing:normal !important;
+    text-transform:inherit !important;
+    box-shadow:none !important;
 }
 
-body button.mbv-vote-btn:hover,
-body .mbv-vote-btn:hover {
-    background: #d4af37 !important;
-    color: #000000 !important;
-    border-color: #d4af37 !important;
-    transform: scale(1.05) !important;
-    box-shadow: none !important;
+/* Paid vote button exact isolation */
+body .elementor-widget-shortcode button.mbv-paid-vote-btn,
+body .elementor button.mbv-paid-vote-btn {
+    border-radius:30px !important;
 }
 
-/* Buy votes button (.mbv-buy-votes) */
-body button.mbv-buy-votes,
-body .mbv-buy-votes {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-    color: #d4af37 !important;
-    border: 2px solid #d4af37 !important;
-    padding: 5px 12px !important;
-    border-radius: 30px !important;
-    font-family: inherit !important;
-    font-size: 11px !important;
-    line-height: 1.2 !important;
-    text-transform: none !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    outline: none !important;
-    min-height: auto !important;
-    height: auto !important;
-    transition: 0.3s ease !important;
-    margin: 0 !important;
-}
-
-body button.mbv-buy-votes:hover,
-body .mbv-buy-votes:hover,
-body .mbv-buy-votes.success {
-    background: #d4af37 !important;
-    color: #000000 !important;
-    border-color: #d4af37 !important;
-}
-
-/* Package select button (.mbv-package-select, .mbv-package button) */
-body button.mbv-package-select,
-body .mbv-package-select {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-    color: #ffffff !important;
-    border: 1px solid #d4af37 !important;
-    border-radius: 25px !important;
-    padding: 8px 18px !important;
-    font-family: inherit !important;
-    font-size: 12px !important;
-    letter-spacing: 1px !important;
-    line-height: 1.2 !important;
-    text-transform: none !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    outline: none !important;
-    min-height: auto !important;
-    height: auto !important;
-    display: block !important;
-    align-self: center !important;
-    transition: 0.3s ease !important;
-    margin: 0 !important;
-}
-
-body button.mbv-package-select:hover,
-body .mbv-package-select:hover {
-    background: #d4af37 !important;
-    color: #050505 !important;
-    border-color: #d4af37 !important;
-}
-
-body .mbv-package button {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    padding: 6px 14px !important;
-    font-family: inherit !important;
-    font-size: 12px !important;
-    border-radius: 30px !important;
-    min-height: auto !important;
-    height: auto !important;
-    line-height: 1.2 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* Popup close button (.mbv-paid-vote-close) */
-body #mbv-paid-vote-popup button.mbv-paid-vote-close,
-body button.mbv-paid-vote-close,
-body .mbv-paid-vote-close {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    position: absolute !important;
-    right: 20px !important;
-    top: 14px !important;
-    background: #c9a227 !important;
-    color: #ffffff !important;
-    border: 1px solid #c9a227 !important;
-    width: 45px !important;
-    height: 45px !important;
-    min-height: 45px !important;
-    max-height: 45px !important;
-    border-radius: 0 !important;
-    cursor: pointer !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-family: inherit !important;
-    font-size: 24px !important;
-    line-height: 43px !important;
-    text-align: center !important;
-    text-transform: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    z-index: 10 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: 0.3s ease !important;
-}
-
-body #mbv-paid-vote-popup button.mbv-paid-vote-close:hover,
-body button.mbv-paid-vote-close:hover,
-body .mbv-paid-vote-close:hover {
-    background: #d4af37 !important;
-    color: #000000 !important;
-    border-color: #d4af37 !important;
-}
-
-/* Modal close button (.mbv-close-modal) */
-body .mbv-modal button.mbv-close-modal,
-body .mbv-close-modal {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-    border: none !important;
-    color: #d4af37 !important;
-    cursor: pointer !important;
-    font-family: inherit !important;
-    font-size: 24px !important;
-    line-height: 1 !important;
-    position: absolute !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* Success popup close button (.mbv-success-close) */
-body .mbv-success-box button.mbv-success-close,
-body button.mbv-success-close,
-body .mbv-success-close {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    position: absolute !important;
-    top: 15px !important;
-    right: 15px !important;
-    width: 34px !important;
-    height: 34px !important;
-    min-height: 34px !important;
-    border-radius: 50% !important;
-    border: 1px solid #d9af2f !important;
-    background: transparent !important;
-    color: #d9af2f !important;
-    font-family: inherit !important;
-    font-size: 22px !important;
-    line-height: 1 !important;
-    cursor: pointer !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-body .mbv-success-box button.mbv-success-close:hover,
-body button.mbv-success-close:hover,
-body .mbv-success-close:hover {
-    background: #d9af2f !important;
-    color: #111111 !important;
-    transform: rotate(90deg) !important;
-    transition: 0.25s ease !important;
-}
-
-/* Vote again button (.mbv-vote-again, #mbv-vote-again) */
-body a.mbv-vote-again,
-body #mbv-vote-again,
-body .mbv-vote-again {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-sizing: border-box !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-top: 20px !important;
-    padding: 12px 35px !important;
-    border-radius: 30px !important;
-    border: 1px solid #d9af2f !important;
-    background: transparent !important;
-    color: #d9af2f !important;
-    text-decoration: none !important;
-    font-family: inherit !important;
-    font-size: 15px !important;
-    line-height: 1.2 !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    outline: none !important;
-    transition: 0.25s ease !important;
-}
-
-body a.mbv-vote-again:hover,
-body #mbv-vote-again:hover,
-body .mbv-vote-again:hover {
-    background: #d9af2f !important;
-    color: #111111 !important;
-    box-shadow: none !important;
-}
-
-
-/* --------------------------------------------------------------------------
-   3. Package Cards Protection
-   -------------------------------------------------------------------------- */
-body #mbv-paid-vote-popup .mbv-packages,
-body .mbv-packages {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    margin-top: 10px !important;
-    margin-bottom: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body #mbv-paid-vote-popup .mbv-package-card,
-body .mbv-packages .mbv-package-card,
+/* Package cards */
+body .elementor .mbv-package-card,
+body .elementor-widget-shortcode .mbv-package-card,
 body .mbv-package-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    min-height: 65px !important;
-    height: auto !important;
-    background: #080808 !important;
-    border: 2px solid #d4af37 !important;
-    border-radius: 15px !important;
-    padding: 12px 15px !important;
-    margin: 0 !important;
-    position: relative !important;
-    gap: 15px !important;
-    cursor: pointer !important;
-    color: #ffffff !important;
-    text-align: left !important;
-    transition: 0.3s ease !important;
-    box-shadow: none !important;
+    box-sizing:border-box !important;
 }
 
-body #mbv-paid-vote-popup .mbv-package-card:hover,
-body .mbv-packages .mbv-package-card:hover,
-body .mbv-package-card:hover {
-    transform: translateY(-2px) !important;
-    border-color: #d4af37 !important;
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15) !important;
-    background: #d9af2f !important;
-    color: #111111 !important;
+/* Typography protection */
+body .elementor .mbv-wrapper h1,
+body .elementor .mbv-wrapper h2,
+body .elementor .mbv-wrapper h3,
+body .elementor .mbv-wrapper h4,
+body .elementor .mbv-wrapper p,
+body .elementor-widget-shortcode .mbv-wrapper h1,
+body .elementor-widget-shortcode .mbv-wrapper h2,
+body .elementor-widget-shortcode .mbv-wrapper h3,
+body .elementor-widget-shortcode .mbv-wrapper p {
+    font-family:inherit;
 }
 
-body .mbv-package-info {
-    flex: 1 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    margin: 0 0 0 10px !important;
-    padding: 0 !important;
-    flex-wrap: nowrap !important;
-    box-sizing: border-box !important;
-}
-
-body .mbv-package-card h3,
-body .mbv-package-info h3 {
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    letter-spacing: 1px !important;
-    font-weight: 600 !important;
-    white-space: nowrap !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    display: inline-block !important;
-}
-
-body .mbv-package-card:hover h3,
-body .mbv-package-card:hover .mbv-package-info h3 {
-    color: #111111 !important;
-}
-
-body .mbv-package-votes {
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    display: inline-block !important;
-    white-space: nowrap !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-}
-
-body .mbv-package-card:hover .mbv-package-votes {
-    color: #111111 !important;
-}
-
-body .mbv-package-price {
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    margin: 4px 20px 0 auto !important;
-    padding: 0 !important;
-    display: block !important;
-    width: 90px !important;
-    text-align: center !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-}
-
-body .mbv-package-card:hover .mbv-package-price {
-    color: #111111 !important;
-}
-
-body .mbv-price-per-vote {
-    color: #aaaaaa !important;
-    font-family: inherit !important;
-    font-size: 11px !important;
-    margin: 3px 0 0 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    position: static !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-    line-height: 1.2 !important;
-}
-
-body .mbv-package-card:hover .mbv-price-per-vote {
-    color: #111111 !important;
-}
-
-body .mbv-package-card:after {
-    content: "Select" !important;
-    border: 1px solid #d4af37 !important;
-    border-radius: 20px !important;
-    padding: 5px 8px !important;
-    color: #ffffff !important;
-    background: transparent !important;
-    text-align: center !important;
-    font-family: inherit !important;
-    font-size: 11px !important;
-    line-height: 1.2 !important;
-    width: 60px !important;
-    box-sizing: border-box !important;
-    display: inline-block !important;
-    letter-spacing: normal !important;
-    text-transform: none !important;
-}
-
-body .mbv-ultimate-label {
-    position: absolute !important;
-    top: -12px !important;
-    right: 15px !important;
-    background: #d4af37 !important;
-    color: #000000 !important;
-    padding: 5px 12px !important;
-    border-radius: 20px !important;
-    font-family: inherit !important;
-    font-size: 10px !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    z-index: 2 !important;
-    box-sizing: border-box !important;
-}
-
-
-/* --------------------------------------------------------------------------
-   4. Popup Elements Protection
-   -------------------------------------------------------------------------- */
-body #mbv-paid-vote-popup,
+/* Popup layering */
+body .elementor .mbv-paid-vote-popup,
+body .elementor-widget-shortcode .mbv-paid-vote-popup,
 body .mbv-paid-vote-popup {
-    position: fixed !important;
-    inset: 0 !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 999999 !important;
-    padding: 20px 0 !important;
-    overflow: hidden !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
+    z-index:999999 !important;
 }
 
-body #mbv-paid-vote-popup .mbv-paid-vote-overlay {
-    position: fixed !important;
-    inset: 0 !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: rgba(0, 0, 0, 0.85) !important;
-    z-index: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
-body #mbv-paid-vote-popup .mbv-paid-vote-content {
-    position: relative !important;
-    width: 620px !important;
-    max-width: 95% !important;
-    margin: 20px auto !important;
-    background: #050505 !important;
-    border: 1px solid #d4af37 !important;
-    border-radius: 25px !important;
-    padding: 25px !important;
-    z-index: 2 !important;
-    color: #ffffff !important;
-    max-height: 90vh !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-    box-sizing: border-box !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: #d4af37 #0a0a0a !important;
-}
 
-body #mbv-paid-vote-popup .mbv-paid-candidate-info {
-    text-align: left !important;
-    color: #ffffff !important;
-    display: flex !important;
-    align-items: stretch !important;
-    justify-content: center !important;
-    gap: 25px !important;
-    margin: 0 !important;
-    margin-bottom: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    background: #050505 !important;
-    box-sizing: border-box !important;
-}
-
-body #mbv-paid-vote-popup .mbv-candidate-image-wrapper {
-    width: 45% !important;
-    height: 235px !important;
-    flex-shrink: 0 !important;
-    overflow: hidden !important;
-    border-radius: 12px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body #mbv-paid-vote-popup .mbv-candidate-details {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px !important;
-    width: 55% !important;
-    padding: 20px 25px !important;
-    margin: 0 !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    box-sizing: border-box !important;
-}
-
-body #mbv-paid-vote-popup .mbv-popup-mini-brand {
-    text-align: left !important;
-    margin: 0 0 18px 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-popup-mini-brand h4 {
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    letter-spacing: 5px !important;
-    font-weight: 500 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-popup-mini-brand span {
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 10px !important;
-    letter-spacing: 3px !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    display: inline-block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-support {
-    text-align: left !important;
-    letter-spacing: 5px !important;
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 10px !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    font-weight: normal !important;
-}
-
-body #mbv-paid-vote-popup #mbv-paid-candidate-name {
-    font-family: inherit !important;
-    font-size: 32px !important;
-    color: #d4af37 !important;
-    text-align: left !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-    font-weight: 500 !important;
-    line-height: 1.1 !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-}
-
-body #mbv-paid-vote-popup .mbv-region {
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 15px !important;
-    letter-spacing: 2px !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-candidate-details p,
-body #mbv-paid-vote-popup .mbv-paid-candidate-info p {
-    margin: 0 0 5px 0 !important;
-    padding: 0 !important;
-    color: #dddddd !important;
-    font-family: inherit !important;
+body .mbv-final-path-text p {
     font-size: 13px !important;
-    line-height: 1.5 !important;
-    text-align: left !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
+    color: #ffffff;
+    opacity: 0.85;
+    margin: 0 auto;
+    line-height: 22px;
 }
 
-body #mbv-paid-vote-popup .mbv-buy-title,
-body #mbv-paid-vote-popup h1.mbv-buy-title {
-    text-align: center !important;
-    font-family: inherit !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    color: #d4af37 !important;
-    margin: 12px 0 12px 0 !important;
-    padding: 0 !important;
-    letter-spacing: 3px !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-personal-message {
-    padding: 15px 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body #mbv-paid-vote-popup .mbv-personal-message label {
-    display: block !important;
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 13px !important;
-    letter-spacing: 2px !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    font-weight: normal !important;
-}
-
-body #mbv-paid-vote-popup #mbv-personal-message,
-body textarea#mbv-personal-message {
-    width: 100% !important;
-    min-height: 100px !important;
-    background: #080808 !important;
-    border: 1px solid #d4af37 !important;
-    border-radius: 12px !important;
-    color: #ffffff !important;
-    padding: 15px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-    font-family: inherit !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    outline: none !important;
-    box-shadow: none !important;
-    resize: vertical !important;
-    text-transform: none !important;
-}
-
-body #mbv-paid-vote-popup #mbv-personal-message::placeholder {
-    color: #777777 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-info {
-    display: flex !important;
-    justify-content: space-around !important;
-    margin: 0 !important;
-    border-top: 1px solid rgba(212, 175, 55, 0.3) !important;
-    border-bottom: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    padding: 10px !important;
-    padding-top: 5px !important;
-    box-sizing: border-box !important;
-    background: transparent !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-info div {
-    text-align: center !important;
-    font-family: inherit !important;
-    font-size: 12px !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-info span {
-    display: block !important;
-    color: #ffffff !important;
-    font-family: inherit !important;
-    font-size: 11px !important;
-    line-height: 1.3 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-transform: none !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-icon {
-    display: block !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-icon svg {
-    width: 30px !important;
-    height: 30px !important;
-    fill: none !important;
-    stroke: #d4af37 !important;
-    stroke-width: 1.5 !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-footer-brand {
-    text-align: center !important;
-    margin: 0 !important;
-    color: #d4af37 !important;
-    font-family: inherit !important;
-    font-size: 11px !important;
-    letter-spacing: 5px !important;
-    padding: 10px !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
+body .mbv-final-path-text h3 {
+    line-height: 1.3em;
+    font-family: inter;
 }
 
 
-/* --------------------------------------------------------------------------
-   5. Images Protection
-   -------------------------------------------------------------------------- */
-body .mbv-card .mbv-image img,
-body .mbv-card img.mbv-candidate-photo,
-body .mbv-card .mbv-candidate-photo {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 350px !important;
-    min-height: 350px !important;
-    display: block !important;
-    object-fit: cover !important;
-    border-radius: 5px !important;
-    border: none !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+body .mbv-votes {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+	color: #d4af30 !important;
 }
 
-body #mbv-paid-vote-popup #mbv-paid-candidate-image,
-body #mbv-paid-vote-popup .mbv-candidate-image-wrapper img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 250px !important;
-    display: block !important;
-    object-fit: cover !important;
-    border-radius: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-body .mbv-leaderboard .mbv-rank-image img,
-body .mbv-ranking-card .mbv-rank-image img {
-    width: 70px !important;
-    height: 70px !important;
-    min-width: 70px !important;
-    max-width: 70px !important;
-    display: block !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    border: 2px solid #d4af37 !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+body .mbv-content h2{
+	line-height: 1.2em;
 }
 
 
-/* --------------------------------------------------------------------------
-   6. Typography Protection Inside Plugin Containers
-   -------------------------------------------------------------------------- */
-body .mbv-card h2,
-body .mbv-card h3,
-body .mbv-card p,
-body .mbv-card span,
-body .mbv-candidates-grid h2,
-body .mbv-candidates-grid h3,
-body .mbv-candidates-grid p,
-body .mbv-candidates-grid span,
-body .mbv-packages h3,
-body .mbv-packages span,
-body .mbv-package-card h3,
-body .mbv-package-card span,
-body #mbv-paid-vote-popup h1,
-body #mbv-paid-vote-popup h2,
-body #mbv-paid-vote-popup h3,
-body #mbv-paid-vote-popup h4,
-body #mbv-paid-vote-popup p,
-body #mbv-paid-vote-popup span,
-body .mbv-leaderboard h3,
-body .mbv-leaderboard span,
-body .mbv-leaderboard p,
-body .mbv-ranking-card h3,
-body .mbv-ranking-card span,
-body .mbv-modal h2,
-body .mbv-modal p,
-body .mbv-success-box h2,
-body .mbv-success-box p,
-body .mbv-success-box span {
-    font-family: inherit !important;
-}
-
-/* Candidate Card Headings & Text */
-body .mbv-card .mbv-content h2 {
-    color: #ffffff !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    margin: 8px 0 5px 0 !important;
-    padding: 0 !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-}
-
-body .mbv-card .mbv-region-title {
-    color: #d4af37 !important;
-    font-size: 14px !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    line-height: 1.2 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-location {
-    color: #ffffff !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-location span {
-    color: #ffffff !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    display: inline !important;
-}
-
-body .mbv-card .mbv-votes {
-    color: #ffffff !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    margin: 12px 0 15px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-percentage {
-    color: #d4af37 !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    line-height: 1.2 !important;
-    margin: 10px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-final-path-text h3 {
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    color: #d4af37 !important;
-    text-transform: uppercase !important;
-    line-height: 1.3 !important;
-    margin: 0 0 5px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-card .mbv-final-path-text p {
-    font-size: 14px !important;
-    color: #ffffff !important;
-    opacity: 0.85 !important;
-    line-height: 1.4 !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-}
-
-/* Popup Typography */
-body #mbv-paid-vote-popup .mbv-buy-title,
-body #mbv-paid-vote-popup h1.mbv-buy-title {
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    color: #d4af37 !important;
-    line-height: 1.2 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    margin: 12px 0 12px 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup #mbv-paid-candidate-name {
-    font-size: 32px !important;
-    font-weight: 500 !important;
-    color: #d4af37 !important;
-    line-height: 1.1 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-popup-mini-brand h4 {
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: #d4af37 !important;
-    letter-spacing: 5px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-candidate-details p,
-body #mbv-paid-vote-popup .mbv-paid-candidate-info p {
-    font-size: 13px !important;
-    color: #dddddd !important;
-    line-height: 1.5 !important;
-    margin: 0 0 5px 0 !important;
-    padding: 0 !important;
-}
-
-body #mbv-paid-vote-popup .mbv-support {
-    font-size: 10px !important;
-    color: #d4af37 !important;
-    letter-spacing: 5px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-region {
-    font-size: 15px !important;
-    color: #ffffff !important;
-    letter-spacing: 2px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-}
-
-body #mbv-paid-vote-popup .mbv-payment-info span {
-    font-size: 11px !important;
-    color: #ffffff !important;
-    line-height: 1.3 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Package Typography */
-body .mbv-package-card h3,
-body .mbv-package-info h3 {
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    letter-spacing: 1px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-transform: uppercase !important;
-}
-
-body .mbv-package-votes {
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-package-price {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    color: #d4af37 !important;
-    line-height: 1.2 !important;
-}
-
-body .mbv-price-per-vote {
-    font-size: 11px !important;
-    color: #aaaaaa !important;
-    line-height: 1.2 !important;
-}
-
-/* Leaderboard Typography */
-body .mbv-leaderboard .mbv-rank-info h3,
-body .mbv-ranking-card .mbv-rank-info h3 {
-    color: #ffffff !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-}
-
-body .mbv-leaderboard .mbv-rank-info span,
-body .mbv-ranking-card .mbv-rank-info span {
-    color: #d4af37 !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    line-height: 1.2 !important;
+body .elementor-widget-shortcode button.mbv-paid-vote-btn:hover, body .elementor button.mbv-paid-vote-btn:hover{
+	background-color: #d4af30 !important;
+	color: black !important;
 }
 
 
-/* --------------------------------------------------------------------------
-   7. Responsive Compatibility Protection (Tablets & Mobile Devices)
-   -------------------------------------------------------------------------- */
-@media (max-width: 900px) {
+body .mbv-buy-title {
+    margin-top: 10px !important;
+    line-height: 1em;
+}
+
+
+body .mbv-candidate-details .mbv-region,body #mbv-paid-candidate-name,body .mbv-support,body .mbv-popup-mini-brand h4{
+	line-height: 1.2em !important;
+}
+
+
+body .mbv-paid-vote-close{
+	padding: 0px !important;
+}
+
+
+
+
+body .mbv-region {
+    margin-bottom: 8px !important;
+}
+
+body #mbv-paid-candidate-name {
+    margin: 0 0 0px !important;
+}
+	
+	body .mbv-support {
+    margin-bottom: 5px !important;
+}
+	
+	
+	body .mbv-popup-mini-brand {
+    margin-bottom: 5px !important;
+}
+	
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
     body .mbv-candidates-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
+        grid-template-columns: 1fr 1fr !important;
+	}
 }
 
-@media (max-width: 768px) {
-    body .mbv-card .mbv-image {
-        height: 220px !important;
-    }
 
-    body .mbv-card .mbv-image img,
-    body .mbv-card img.mbv-candidate-photo,
-    body .mbv-card .mbv-candidate-photo {
-        height: 220px !important;
-        min-height: 220px !important;
-    }
 
-    body .mbv-card .mbv-content h2 {
-        font-size: 18px !important;
-    }
-
-    body .mbv-card {
-        border-radius: 15px !important;
-        width: 100% !important;
-    }
-
-    body button.mbv-vote-btn,
-    body .mbv-vote-btn {
-        padding: 10px 20px !important;
-        font-size: 14px !important;
-    }
-
-    body .mbv-candidates-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-
-    body .mbv-region-filters {
-        display: flex !important;
-        gap: 12px !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        padding: 10px 15px !important;
-        scrollbar-width: none !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-
-    body .mbv-region-filters button.mbv-region-filter,
-    body button.mbv-region-filter,
-    body .mbv-region-filter {
-        flex: 0 0 auto !important;
-        min-width: auto !important;
-        padding: 10px 22px !important;
-        font-size: 14px !important;
-    }
-}
-
-@media (max-width: 700px) {
-    body #mbv-paid-vote-popup .mbv-paid-candidate-info {
-        flex-direction: column !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-candidate-image-wrapper {
-        width: 100% !important;
-        height: 220px !important;
-    }
-
-    body #mbv-paid-vote-popup #mbv-paid-candidate-image,
-    body #mbv-paid-vote-popup .mbv-candidate-image-wrapper img {
-        height: 240px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-candidate-details {
-        width: 100% !important;
-        padding: 8px 0 !important;
-        display: block !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-popup-mini-brand {
-        margin: 0 !important;
-        text-align: left !important;
-        display: inline-block !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-support {
-        font-size: 10px !important;
-        letter-spacing: 5px !important;
-        text-align: right !important;
-        float: right !important;
-        margin-top: 5px !important;
-        margin-bottom: 0 !important;
-    }
-
-    body #mbv-paid-vote-popup #mbv-paid-candidate-name {
-        font-size: 30px !important;
-        margin: 8px 0 0 0 !important;
-        text-align: left !important;
-        display: block !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-region {
-        margin: 3px 0 8px 0 !important;
-        font-size: 14px !important;
-        letter-spacing: 2px !important;
-        text-align: left !important;
-        display: block !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-candidate-details p {
-        margin: 5px 0 0 0 !important;
-        font-size: 13px !important;
-        line-height: 1.4 !important;
-        text-align: left !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-package-card,
-    body .mbv-package-card {
-        padding: 10px 8px !important;
-        min-height: 55px !important;
-        border-radius: 12px !important;
-        gap: 5px !important;
-    }
-
-    body .mbv-package-info {
-        gap: 5px !important;
-        margin-left: 0 !important;
-    }
-
-    body .mbv-package-card h3,
-    body .mbv-package-info h3 {
-        font-size: 13px !important;
-        letter-spacing: 0 !important;
-        white-space: nowrap !important;
-        line-height: 1.2 !important;
-    }
-
-    body .mbv-package-price {
-        font-size: 14px !important;
-        margin: 0 !important;
-        margin-right: 8px !important;
-        white-space: nowrap !important;
-    }
-
-    body button.mbv-package-select,
-    body .mbv-package-select {
-        padding: 6px 12px !important;
-        font-size: 11px !important;
-        white-space: nowrap !important;
-        border-radius: 20px !important;
-    }
-
-    body .mbv-ultimate-label {
-        top: -10px !important;
-        right: 8px !important;
-        padding: 4px 10px !important;
-        font-size: 9px !important;
+@media (max-width: 600px) {
+    body .mbv-image img {
+        aspect-ratio: 1 / 1 !important;
+		        height: 100% !important;
     }
 }
 
 @media (max-width: 600px) {
-    body .mbv-ranking-card {
-        padding: 15px !important;
-        gap: 12px !important;
-    }
-
-    body .mbv-rank-number {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 16px !important;
-    }
-
-    body .mbv-leaderboard .mbv-rank-image img,
-    body .mbv-ranking-card .mbv-rank-image img {
-        width: 55px !important;
-        height: 55px !important;
-        min-width: 55px !important;
-        max-width: 55px !important;
-    }
-
-    body .mbv-candidates-grid {
-        padding: 20px 10px !important;
-        grid-template-columns: 1fr !important;
-    }
-
-    body .mbv-card {
-        width: 100% !important;
-    }
-
-    body .mbv-card .mbv-image {
-        height: 220px !important;
-    }
-
-    body .mbv-card .mbv-image img,
-    body .mbv-card img.mbv-candidate-photo,
-    body .mbv-card .mbv-candidate-photo {
-        height: 220px !important;
-        min-height: 220px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-paid-vote-content {
-        width: 94% !important;
-        padding: 16px !important;
-        max-height: 88vh !important;
-        border-radius: 20px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-paid-candidate-info {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 5px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-paid-candidate-info img,
-    body #mbv-paid-vote-popup #mbv-paid-candidate-image {
-        width: 45px !important;
-        height: 45px !important;
-        min-height: 45px !important;
-        max-width: 45px !important;
-        border-radius: 50% !important;
-        margin: 0 auto !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-candidate-image-wrapper {
-        width: auto !important;
-        height: auto !important;
-        border-radius: 50% !important;
-        margin: 0 auto !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-support {
-        text-align: center !important;
-        float: none !important;
-        margin-top: 4px !important;
-        font-size: 10px !important;
-    }
-
-    body #mbv-paid-vote-popup #mbv-paid-candidate-name {
-        text-align: center !important;
-        font-size: 24px !important;
-        margin: 3px 0 !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-region {
-        text-align: center !important;
-        margin: 3px 0 8px 0 !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-candidate-details p,
-    body #mbv-paid-vote-popup .mbv-paid-candidate-info p {
-        text-align: center !important;
-        margin: 4px 0 !important;
-        font-size: 12px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-buy-title,
-    body #mbv-paid-vote-popup h1.mbv-buy-title {
-        font-size: 26px !important;
-        margin: 8px 0 12px 0 !important;
-    }
-
-    body #mbv-paid-vote-popup button.mbv-paid-vote-close,
-    body button.mbv-paid-vote-close,
-    body .mbv-paid-vote-close {
-        top: 15px !important;
-        right: 15px !important;
-        width: 32px !important;
-        height: 32px !important;
-        min-height: 32px !important;
-        max-height: 32px !important;
-        font-size: 14px !important;
-        line-height: 28px !important;
-    }
-
-    body #mbv-paid-vote-popup .mbv-package-card,
-    body .mbv-package-card {
-        width: 100% !important;
-        min-height: 38px !important;
-        padding: 10px 12px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        text-align: center !important;
-        gap: 8px !important;
-    }
-
-    body .mbv-package-card h3,
-    body .mbv-package-info h3 {
-        font-size: 13px !important;
-        white-space: nowrap !important;
-        flex: 1 !important;
-        min-width: 0 !important;
-    }
-
-    body .mbv-package-votes {
-        font-size: 13px !important;
-        white-space: nowrap !important;
-        display: block !important;
-        flex: 0 0 70px !important;
-        text-align: center !important;
-    }
-
-    body .mbv-package-price {
-        font-size: 13px !important;
-        color: #d4af37 !important;
-        width: auto !important;
-        margin: 0 6px 0 0 !important;
-        flex: 0 0 55px !important;
-        text-align: center !important;
-    }
-
-    body .mbv-package-card:after {
-        width: auto !important;
-        padding: 5px 4px !important;
-        font-size: 11px !important;
-        flex: 0 0 55px !important;
-    }
-
-    body .mbv-candidate-details {
-        text-align: center !important;
-    }
-
-    body .mbv-content h2 {
-        font-size: 22px !important;
-    }
-
-    body .mbv-region-filters {
-        gap: 8px !important;
-        margin: 20px 0 25px 0 !important;
-    }
-
-    body .mbv-region-filters button.mbv-region-filter,
-    body button.mbv-region-filter,
-    body .mbv-region-filter {
-        padding: 8px 18px !important;
-        font-size: 13px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    body .mbv-card .mbv-image img,
-    body .mbv-card img.mbv-candidate-photo,
-    body .mbv-card .mbv-candidate-photo {
-        height: 200px !important;
-        min-height: 200px !important;
-    }
-
-    body .mbv-card .mbv-content h2 {
-        font-size: 20px !important;
-    }
-
-    body .mbv-packages {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-@media (max-width: 450px) {
-    body .mbv-candidates-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    body .mbv-card .mbv-image {
-        height: 280px !important;
-    }
-
-    body .mbv-card .mbv-image img,
-    body .mbv-card img.mbv-candidate-photo,
-    body .mbv-card .mbv-candidate-photo {
-        height: 280px !important;
-        min-height: 280px !important;
+    body .mbv-image {
+        aspect-ratio: 1 / 1 !important;
+		        height: 100% !important;
     }
 }

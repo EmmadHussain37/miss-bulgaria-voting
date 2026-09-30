@@ -106,7 +106,7 @@ class MBV_Vote_Package_Fields
         <p>
 
         <label>
-        Package Price ($)
+        Package Price (€)
         </label>
 
         <input

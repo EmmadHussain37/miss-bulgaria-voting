@@ -13,10 +13,13 @@ class MBV_Assets
     {
 
         add_action(
-			'wp_enqueue_scripts',
-			array($this,'load'),
-			999
-		);
+				'wp_enqueue_scripts',
+				array(
+					$this,
+					'load'
+				),
+				999
+			);
 
     }
 
@@ -34,19 +37,13 @@ class MBV_Assets
         */
 
         wp_enqueue_style(
-
-			'mbv-frontend',
-
-			MBV_URL .
-			'assets/css/frontend.css',
-
-			array(),
-
-			filemtime(
-				MBV_PATH . 'assets/css/frontend.css'
-			)
-
-		);
+					'mbv-frontend',
+					MBV_URL . 'assets/css/frontend.css',
+					array(),
+					filemtime(
+						MBV_PATH . 'assets/css/frontend.css'
+					)
+				);
 
 
 

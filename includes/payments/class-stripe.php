@@ -194,6 +194,37 @@ class MBV_Stripe
 
 
 
+        /*
+        Check Maximum Votes Limit
+        */
+
+        $max_votes_setting = get_option('mbv_max_votes_per_candidate', '');
+
+        if ($max_votes_setting !== '' && $max_votes_setting !== false && is_numeric($max_votes_setting)) {
+
+            $limit = intval($max_votes_setting);
+
+            $current_votes = intval(
+                get_post_meta(
+                    $candidate_id,
+                    '_mbv_votes',
+                    true
+                )
+            );
+
+            if ($limit > 0 && $current_votes >= $limit) {
+
+                return new WP_Error(
+                    'voting_closed',
+                    'This candidate has reached the maximum allowed votes.',
+                    array(
+                        'status' => 403
+                    )
+                );
+
+            }
+
+        }
 
 
 
@@ -372,7 +403,7 @@ class MBV_Stripe
 
                         'price_data'=>array(
 
-                            'currency'=>'usd',
+                            'currency'=>'eur',
 
 
                             'product_data'=>array(
