@@ -182,6 +182,20 @@ miss-bulgaria-voting/
 
 # Changelog
 
+## 1.0.2 (2026-10-02)
+
+### Improvements & Fixes:
+
+- Individual Countdown Priority Override:
+  - Enabled individual candidate countdown to take precedence over the Universal Counter.
+  - Allows specific candidates to have their own closing deadline while global voting is active.
+  - Updated backend meta box description to clarify the override behavior.
+
+- Responsive Card Image & Layout Fixes:
+  - Candidate photos now maintain their natural aspect ratio (`height: auto !important`) without cropping or stretching.
+  - Removed restrictive fixed-height rules across mobile and tablet breakpoints.
+  - Cleaned up duplicate media queries for candidate card containers.
+
 ## 1.0.1 (2026-09-30)
 
 ### New Features:

@@ -589,7 +589,7 @@ body .mbv-card{
 }
 
 body .mbv-image{
-    height: 350px !important;
+    height: auto !important;
     overflow: hidden;
     position: relative;
     margin-bottom: 15px;
@@ -850,27 +850,24 @@ body .mbv-paid-vote-btn:hover::before{
     color: black;
 }
 
-body .mbv-image img{
-    width: 100% !important;
-    height: 350px !important;
-    object-fit: cover !important;
-    border-radius: 5px !important;
-}
-
+body .mbv-card .mbv-image img,
+body .mbv-card .mbv-candidate-photo,
+body .mbv-image img,
 body .mbv-candidate-photo{
-    height: 350px !important;
     width: 100% !important;
-    object-fit: cover !important;
+    max-width: 100% !important;
+    object-fit: unset !important;
+    display: block;
     border-radius: 5px !important;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     body .mbv-image img {
-        height: 550px !important;
+        height: auto !important;
     }
 
     body .mbv-image {
-        height: 550px !important;
+        height: auto !important;
     }
 }
 
@@ -1407,7 +1404,7 @@ from {
 @media (max-width: 768px) {
 
     body .mbv-image{
-        height: 220px;
+        height: auto !important;
     }
 
     body .mbv-card h2{
@@ -1425,7 +1422,7 @@ from {
     }
 
     body .mbv-candidate-photo{
-        height: 220px !important;
+        height: auto !important;
     }
 
     body .mbv-candidates{
@@ -1653,11 +1650,11 @@ from {
     }
 
     body .mbv-image{
-        height: 220px !important;
+        height: auto !important;
     }
 
     body .mbv-image img{
-        height: 220px !important;
+        height: auto !important;
     }
 
     body .mbv-packages{
@@ -1832,8 +1829,8 @@ from {
     }
 
     body .mbv-candidate-photo{
-        width: 160px;
-        height: 160px;
+        width: 100% !important;
+        height: auto !important;
     }
 
     body .mbv-content h2{
@@ -1855,7 +1852,7 @@ from {
 @media (max-width: 480px) {
 
     body .mbv-candidate-photo{
-        height: 200px !important;
+        height: auto !important;
     }
 
     body .mbv-content h2{
@@ -1879,7 +1876,7 @@ from {
     }
 
     body .mbv-image{
-        height: 280px;
+        height: auto !important;
     }
 
 }
@@ -2051,20 +2048,4 @@ body #mbv-paid-candidate-name {
     body .mbv-candidates-grid {
         grid-template-columns: 1fr 1fr !important;
 	}
-}
-
-
-
-@media (max-width: 600px) {
-    body .mbv-image img {
-        aspect-ratio: 1 / 1 !important;
-		        height: 100% !important;
-    }
-}
-
-@media (max-width: 600px) {
-    body .mbv-image {
-        aspect-ratio: 1 / 1 !important;
-		        height: 100% !important;
-    }
 }

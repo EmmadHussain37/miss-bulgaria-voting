@@ -181,7 +181,7 @@ class MBV_Candidate_Fields
             </label>
             <br>
             <small>
-                Default is OFF. If enabled, this individual countdown is displayed when the Universal Counter is OFF.
+                Default is OFF. If enabled, this individual countdown overrides the Universal Counter for this candidate.
             </small>
         </p>
 
@@ -283,9 +283,9 @@ class MBV_Candidate_Fields
 
 
     /**
-     * Determine active countdown expiry date based on dual countdown priority logic:
-     * 1. If Universal Counter is ON: return Universal Closing Date (for all candidates).
-     * 2. Else If Universal Counter is OFF and Candidate Individual Counter is ON: return Candidate Individual Closing Date.
+     * Determine active countdown expiry date based on candidate-specific priority logic:
+     * 1. If Candidate Individual Counter is ON: return Candidate Individual Closing Date.
+     * 2. Else If Universal Counter is ON: return Universal Closing Date.
      * 3. Else: return empty string (hide countdown).
      *
      * @param int $candidate_id
@@ -293,21 +293,20 @@ class MBV_Candidate_Fields
      */
     public static function get_active_countdown($candidate_id)
     {
-        $universal_enable = get_option('mbv_universal_countdown_enable', '1');
-        $universal_end_date = get_option('mbv_universal_countdown_end_date', '');
-
-        $is_universal_on = ($universal_enable === '1' || $universal_enable === 1 || $universal_enable === true || $universal_enable === 'on');
-
-        if ($is_universal_on) {
-            return !empty($universal_end_date) ? $universal_end_date : '';
-        }
-
         $individual_enable = get_post_meta($candidate_id, '_mbv_countdown_enable', true);
         $is_individual_on = ($individual_enable === '1' || $individual_enable === 1 || $individual_enable === true || $individual_enable === 'on');
 
         if ($is_individual_on) {
             $individual_end_date = get_post_meta($candidate_id, '_mbv_countdown_end_date', true);
             return !empty($individual_end_date) ? $individual_end_date : '';
+        }
+
+        $universal_enable = get_option('mbv_universal_countdown_enable', '1');
+        $is_universal_on = ($universal_enable === '1' || $universal_enable === 1 || $universal_enable === true || $universal_enable === 'on');
+
+        if ($is_universal_on) {
+            $universal_end_date = get_option('mbv_universal_countdown_end_date', '');
+            return !empty($universal_end_date) ? $universal_end_date : '';
         }
 
         return '';
